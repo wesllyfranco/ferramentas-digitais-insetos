@@ -171,9 +171,4 @@ Você pode alterar os nomes e classificações dos insetos para personalizar o j
 3. Em "Source", selecione a branch principal e clique em "Save".
 4. Seu jogo estará disponível online em alguns segundos!
 
-## Dica
-
-Use esse projeto como base para outros temas educativos: animais, plantas, figuras geométricas, etc.
-
-Bom aprendizado e divirta-se programando!
-
+## Bom aprendizado e divirta-se programando!
