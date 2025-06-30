@@ -171,4 +171,8 @@ Você pode alterar os nomes e classificações dos insetos para personalizar o j
 3. Em "Source", selecione a branch principal e clique em "Save".
 4. Seu jogo estará disponível online em alguns segundos!
 
+## Visual do jogo
+
+![Visual do jogo](imagens/jogo-exemplo.png)
+
 ## Bom aprendizado e divirta-se programando!
