@@ -10,9 +10,9 @@ Criar um jogo educativo da memória digital onde os pares são formados por nome
 
 Crie os seguintes arquivos no seu projeto:
 
-- `index.html` → estrutura do site
-- `style.css` → estilos visuais do jogo
-- `script.js` → lógica do jogo
+- index.html → estrutura do site
+- style.css → estilos visuais do jogo
+- script.js → lógica do jogo
 
 Coloque os três arquivos na mesma pasta.
 
