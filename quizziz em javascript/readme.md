@@ -164,7 +164,7 @@ Destaques do Estilo:
 O arquivo perguntas.js contém o conteúdo do quiz. É uma lista de
 objetos, onde cada objeto representa uma pergunta com suas alternativas.
 
-Clique para ver o código completo de perguntas.js
+<details> <summary>Clique para ver o código completo de <code>perguntas.js</code></summary>
     // Exemplo inicial de perguntas
     export const perguntas = [
         {
@@ -198,7 +198,7 @@ Clique para ver o código completo de perguntas.js
             ]
         }
     ];
-
+</details>
 Entendendo a Estrutura:
 
 -   enunciado: O texto da pergunta.
