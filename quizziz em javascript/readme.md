@@ -39,7 +39,6 @@ dela, crie os seguintes arquivos:
 
 O arquivo `index.html` define todos os elementos visíveis na página: o título, os textos e os espaços onde as perguntas e resultados aparecerão.
 
-<details>
 <summary>Clique para ver o código completo de <code>index.html</code></summary>
 
 ```html
@@ -71,7 +70,7 @@ O arquivo `index.html` define todos os elementos visíveis na página: o título
 </body>
 </html>
 ```
-</details>
+
 
 O que esse código faz?
 
