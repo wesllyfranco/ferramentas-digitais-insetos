@@ -88,8 +88,8 @@ define cores, fontes, espaçamentos e o layout dos elementos.
 
 <details>
 <summary>Clique para ver o código completo de <code>style.css</code></summary>
-```
-    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    ```@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     :root{
         --cor-fundo: #d6f3e6;
@@ -153,6 +153,7 @@ define cores, fontes, espaçamentos e o layout dos elementos.
         display: block;
     }
 ```
+
 </details>
 Destaques do Estilo:
 
