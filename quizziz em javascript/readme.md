@@ -229,14 +229,18 @@ lista, tornando o jogo mais personalizado. Assim o resumo das respostas sempre t
 
     export const nome = aleatorio(nomes);
 ```
+
+</details>
 ------------------------------------------------------------------------
 
-🧠 Passo 5: A Inteligência do Jogo (JavaScript)
+## 🧠 Passo 5: A Inteligência do Jogo (JavaScript)
 
 O arquivo script.js conecta tudo: ele controla o fluxo do jogo, exibe as
-perguntas e processa as respostas.
+perguntas e processa as respostas. É o coração do jogo
 
-Clique para ver o código completo de script.js
+<details> <summary>Clique para ver o código completo de <code>script.js</code></summary>
+
+    ```js
     import { aleatorio, nome } from './aleatorio.js';
     import { perguntas } from './perguntas.js';
 
@@ -298,4 +302,7 @@ Clique para ver o código completo de script.js
     }
 
     botaoJogarNovamente.addEventListener('click', iniciaJogo);
+    
+```
 
+</details>
