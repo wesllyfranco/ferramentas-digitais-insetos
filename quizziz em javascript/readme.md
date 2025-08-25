@@ -66,8 +66,7 @@ O arquivo `index.html` define todos os elementos visíveis na página: o título
     <script type="module" src="js/script.js"></script>
 </body>
 </html>
-
-
+```
 </details>
 O que esse código faz?
 
