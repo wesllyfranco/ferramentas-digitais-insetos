@@ -166,11 +166,6 @@ objetos, onde cada objeto representa uma pergunta com suas alternativas.
 
 <details> <summary>Clique para ver o código completo de <code>perguntas.js</code></summary>
 
-```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
     
  ```js
 export const perguntas = [
