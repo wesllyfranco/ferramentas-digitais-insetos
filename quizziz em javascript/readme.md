@@ -305,3 +305,8 @@ perguntas e processa as respostas. É o coração do jogo
 ```
 
 </details>
+
+
+## Visual do jogo
+
+![Visual do jogo](imagens/quiz-insetos-java.png)
