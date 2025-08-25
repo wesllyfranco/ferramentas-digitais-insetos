@@ -241,6 +241,7 @@ perguntas e processa as respostas. É o coração do jogo
 <details> <summary>Clique para ver o código completo de <code>script.js</code></summary>
 
     ```js
+    
     import { aleatorio, nome } from './aleatorio.js';
     import { perguntas } from './perguntas.js';
 
