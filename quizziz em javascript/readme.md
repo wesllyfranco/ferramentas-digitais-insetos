@@ -165,39 +165,41 @@ O arquivo perguntas.js contém o conteúdo do quiz. É uma lista de
 objetos, onde cada objeto representa uma pergunta com suas alternativas.
 
 <details> <summary>Clique para ver o código completo de <code>perguntas.js</code></summary>
+  
     // Exemplo inicial de perguntas
-    export const perguntas = [
-        {
-            enunciado: "Qual destes insetos é conhecido por sua incrível força?",
-            alternativas: [
-                {
-                    texto: "Besouro-rinoceronte",
-                    afirmacao: ["Você descobriu que o besouro-rinoceronte pode carregar até 850 vezes o seu peso!"],
-                    proxima: 1
-                },
-                {
-                    texto: "Formiga-de-fogo",
-                    afirmacao: ["Elas são fortes, mas o título vai para outro inseto."],
-                    proxima: 1
-                }
-            ]
-        },
-        {
-            enunciado: "Qual inseto é essencial para a polinização de diversas plantas?",
-            alternativas: [
-                {
-                    texto: "Abelha",
-                    afirmacao: ["Você acertou! As abelhas são polinizadores fundamentais."],
-                    proxima: 2
-                },
-                {
-                    texto: "Mosquito",
-                    afirmacao: ["Não dessa vez... Os mosquitos têm outro papel ecológico."],
-                    proxima: 2
-                }
-            ]
-        }
-    ];
+export const perguntas = [
+    {
+        enunciado: "Qual destes insetos é conhecido por sua incrível força?",
+        alternativas: [
+            {
+                texto: "Besouro-rinoceronte",
+                afirmacao: ["Você descobriu que o besouro-rinoceronte pode carregar até 850 vezes o seu peso!"],
+                proxima: 1
+            },
+            {
+                texto: "Formiga-de-fogo",
+                afirmacao: ["Elas são fortes, mas o título vai para outro inseto."],
+                proxima: 1
+            }
+        ]
+    },
+    {
+        enunciado: "Qual inseto é essencial para a polinização de diversas plantas?",
+        alternativas: [
+            {
+                texto: "Abelha",
+                afirmacao: ["Você acertou! As abelhas são polinizadores fundamentais."],
+                proxima: 2
+            },
+            {
+                texto: "Mosquito",
+                afirmacao: ["Não dessa vez... Os mosquitos têm outro papel ecológico."],
+                proxima: 2
+            }
+        ]
+    }
+];
+
 </details>
 Entendendo a Estrutura:
 
