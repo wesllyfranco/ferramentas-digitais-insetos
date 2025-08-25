@@ -88,38 +88,46 @@ dela, crie os seguintes arquivos:
 
 📝 Passo 1: A Estrutura do Jogo (HTML)
 
-O arquivo index.html define todos os elementos visíveis na página: o
-título, os textos e os espaços onde as perguntas e resultados
-aparecerão.
 
-Clique para ver o código completo de index.html
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Insetologia</title>
-    </head>
-    <body>
-        <div class="caixa-principal">
-            <h1>O que você sabe sobre os insetos?</h1>
-            <div class="tela-inicial">
-                <p>Bem-vindo ao Quiz dos Insetos! Prepare-se para mergulhar no fascinante mundo desses pequenos seres...</p>
-                <button class="iniciar-btn">Iniciar</button>
-            </div>
-            <div class="caixa-perguntas"></div>
-            <div class="caixa-alternativas"></div>
-            <div class="caixa-resultado">
-                <p class="texto-resultado"></p>
-                <button class="novamente-btn">Jogar Novamente</button>
-            </div>
+---
+
+## 📝 Passo 1: A Estrutura do Jogo (HTML)
+
+O arquivo `index.html` define todos os elementos visíveis na página: o título, os textos e os espaços onde as perguntas e resultados aparecerão.
+
+<details>
+<summary>Clique para ver o código completo de <code>index.html</code></summary>
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Insetologia</title>
+</head>
+<body>
+    <div class="caixa-principal">
+        <h1>O que você sabe sobre os insetos?</h1>
+        <div class="tela-inicial">
+            <p>Bem-vindo ao Quiz dos Insetos! Prepare-se para mergulhar no fascinante mundo desses pequenos seres...</p>
+            <button class="iniciar-btn">Iniciar</button>
         </div>
-        <script type="module" src="js/aleatorio.js"></script>
-        <script type="module" src="js/perguntas.js"></script>
-        <script type="module" src="js/script.js"></script>
-    </body>
-    </html>
+        <div class="caixa-perguntas"></div>
+        <div class="caixa-alternativas"></div>
+        <div class="caixa-resultado">
+            <p class="texto-resultado"></p>
+            <button class="novamente-btn">Jogar Novamente</button>
+        </div>
+    </div>
+    <script type="module" src="js/aleatorio.js"></script>
+    <script type="module" src="js/perguntas.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
+
+</detaisl>
 
 O que esse código faz?
 
