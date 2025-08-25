@@ -61,7 +61,7 @@ O arquivo `index.html` define todos os elementos visíveis na página: o título
 </html>
 
 </details>
-
+```
 O que esse código faz?
 
 Cria a estrutura básica da página.
