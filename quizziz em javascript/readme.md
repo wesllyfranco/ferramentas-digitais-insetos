@@ -36,7 +36,7 @@ dela, crie os seguintes arquivos:
 
 O arquivo `index.html` define todos os elementos visíveis na página: o título, os textos e os espaços onde as perguntas e resultados aparecerão.
 <details>
-<summary>Clique para ver o código completo de <code>index.html</code></summary>
+<strong><summary>Clique para ver o código completo de <code>index.html</code></summary></strong>
 
 ```html
 <!DOCTYPE html>
@@ -159,7 +159,7 @@ Destaques do Estilo:
 
 ------------------------------------------------------------------------
 
-🤖 Passo 3: Criando as Perguntas (JavaScript)
+## 🤖 Passo 3: Criando as Perguntas (JavaScript)
 
 O arquivo perguntas.js contém o conteúdo do quiz. É uma lista de
 objetos, onde cada objeto representa uma pergunta com suas alternativas.
