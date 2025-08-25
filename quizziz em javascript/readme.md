@@ -38,7 +38,7 @@ O arquivo `index.html` define todos os elementos visíveis na página: o título
 <details>
 <summary>Clique para ver o código completo de <code>index.html</code></summary>
 
-html
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
