@@ -3,102 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Projetos</title>
+  <title>Portfólio de Projetos - Weslly Franco</title>
   <style>
     * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-body {
-  background: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+    body {
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-/* Cabeçalho */
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #4a90e2;
-  color: white;
-}
+      header {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: #2c3e50; /* Tom de azul mais escuro e moderno */
+      color: white;
+    }
 
-header h1 {
-  margin-bottom: 0.5rem;
-}
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+        color: #bdc3c7; /* Cinza claro para subtítulo */
+    }
 
-/* Grid de projetos */
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  padding: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+    /* Grid de projetos */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
-/* Card */
-.card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    /* Card */
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
 
-.card h2 {
-  margin-bottom: 0.5rem;
-  color: #4a90e2;
-}
+    .card h2 {
+      margin-bottom: 0.75rem;
+      color: #2c3e50;
+      font-size: 1.4rem;
+    }
+    
+    .card p {
+        flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+        margin-bottom: 1rem;
+    }
 
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-  background: #eee;
-  font-size: 0.9rem;
-}
-
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: auto;
+      background: #2c3e50;
+      color: #bdc3c7;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🌐 Meu Portfólio</h1>
-    <p>Selecione um dos projetos abaixo para visualizar</p>
+    <h1>Portfólio de Ferramentas Digitais</h1>
+    <p>Projetos desenvolvidos com foco em biologia e educação</p>
   </header>
 
   <main class="grid">
-    <a href="projetos/quiz-insetos/index.html" class="card" target="_blank">
-      <h2>🐜 Quiz dos Insetos</h2>
-      <p>Um quiz interativo sobre biologia e insetos.</p>
+    
+    <a href="jogo_da_memoria/index.html" class="card" target="_blank">
+      <h2>🧠 Jogo da Memória</h2>
+      <p>Um clássico jogo da memória com tema de insetos, criado com HTML, CSS e JavaScript.</p>
+    </a>
+    
+    <a href="quiz-javascript/index.html" class="card" target="_blank">
+      <h2>🐜 Quiz Interativo</h2>
+      <p>Teste seus conhecimentos sobre o mundo dos insetos com este quiz dinâmico feito em JavaScript.</p>
     </a>
 
-    <a href="projetos/site-sustentabilidade/index.html" class="card" target="_blank">
-      <h2>🌱 Sustentabilidade</h2>
-      <p>Site educativo sobre práticas sustentáveis.</p>
+    <a href="insetos-3d/index.html" class="card" target="_blank">
+      <h2>🦋 Modelos 3D de Insetos</h2>
+      <p>Uma galeria interativa para visualizar modelos 3D de diferentes espécies de insetos.</p>
     </a>
 
-    <a href="projetos/outro-site/index.html" class="card" target="_blank">
-      <h2>✨ Outro Projeto</h2>
-      <p>Exemplo adicional de site criado.</p>
+    <a href="URL_DO_SEU_PERFIL_OU_PROJETO_SCRATCH" class="card" target="_blank">
+      <h2>🕹️ Jogos no Scratch</h2>
+      <p>Coleção de jogos educativos e animações desenvolvidas na plataforma Scratch. (Link externo)</p>
     </a>
+    
+    <a href="URL_DO_SEU_PERFIL_INATURALIST" class="card" target="_blank">
+      <h2>🌿 Perfil iNaturalist</h2>
+      <p>Minhas contribuições e observações de biodiversidade na plataforma de ciência cidadã iNaturalist. (Link externo)</p>
+    </a>
+
   </main>
 
   <footer>
-    <p>Feito com ❤️ por Weslly | Hospedado no GitHub Pages</p>
+    <p>Desenvolvido por Weslly Franco | Hospedado no GitHub Pages</p>
   </footer>
 </body>
 </html>
-
