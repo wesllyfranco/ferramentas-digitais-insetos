@@ -38,7 +38,7 @@ dela, crie os seguintes arquivos:
 ## 📝 Passo 1: A Estrutura do Jogo (HTML)
 
 O arquivo `index.html` define todos os elementos visíveis na página: o título, os textos e os espaços onde as perguntas e resultados aparecerão.
-
+<details>
 <summary>Clique para ver o código completo de <code>index.html</code></summary>
 
 ```html
@@ -71,7 +71,7 @@ O arquivo `index.html` define todos os elementos visíveis na página: o título
 </html>
 ```
 
-
+</details>
 O que esse código faz?
 
 -   Cria a estrutura básica da página.
@@ -86,7 +86,9 @@ O que esse código faz?
 O arquivo style.css é responsável pela aparência do nosso quiz. Ele
 define cores, fontes, espaçamentos e o layout dos elementos.
 
+<details>
 <summary>Clique para ver o código completo de <code>style.css</code></summary>
+```
     @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     :root{
@@ -150,7 +152,8 @@ define cores, fontes, espaçamentos e o layout dos elementos.
     .caixa-resultado.mostrar {
         display: block;
     }
-
+```
+</details>
 Destaques do Estilo:
 
 -   @import: Importa fontes do Google Fonts para dar um toque especial
