@@ -212,12 +212,14 @@ Entendendo a Estrutura:
 
 ------------------------------------------------------------------------
 
-🍀 Passo 4: Adicionando Sorte ao Jogo (JavaScript)
+## 🍀 Passo 4: Adicionando Sorte ao Jogo (JavaScript)
 
 O arquivo aleatorio.js contém uma função simples para sortear um nome da
-lista, tornando o jogo mais personalizado.
+lista, tornando o jogo mais personalizado. Assim o resumo das respostas sempre terá um nome de jogador aleatório
 
-Clique para ver o código completo de aleatorio.js
+<details> <summary>Clique para ver o código completo de <code>aleatorio.js</code></summary>
+
+ ```js   
     const nomes = ["Juca", "Margarida", "Alfredo", "Deolane", "Catra", "Pipokinha"];
 
     export function aleatorio (lista){
@@ -226,7 +228,7 @@ Clique para ver o código completo de aleatorio.js
     }
 
     export const nome = aleatorio(nomes);
-
+```
 ------------------------------------------------------------------------
 
 🧠 Passo 5: A Inteligência do Jogo (JavaScript)
