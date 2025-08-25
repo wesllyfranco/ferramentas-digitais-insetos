@@ -240,8 +240,7 @@ perguntas e processa as respostas. É o coração do jogo
 
 <details> <summary>Clique para ver o código completo de <code>script.js</code></summary>
 
-    ```js
-    
+```js
     import { aleatorio, nome } from './aleatorio.js';
     import { perguntas } from './perguntas.js';
 
@@ -302,8 +301,7 @@ perguntas e processa as respostas. É o coração do jogo
         botaoJogarNovamente.style.display = 'block';
     }
 
-    botaoJogarNovamente.addEventListener('click', iniciaJogo);
-    
+    botaoJogarNovamente.addEventListener('click', iniciaJogo);    
 ```
 
 </details>
