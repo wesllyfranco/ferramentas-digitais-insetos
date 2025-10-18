@@ -81,21 +81,33 @@
     /* Rodapé */
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem; /* Aumentei o padding para dar mais espaço */
       margin-top: auto;
       background: #2c3e50;
       color: #bdc3c7;
       font-size: 0.9rem;
     }
 
-    footer a {
-        color: #ecf0f1; /* Cor mais clara para o link no rodapé */
+    /* NOVO ESTILO PARA O LINK DESTACADO DO REPOSITÓRIO */
+    .repo-link {
+        display: inline-block;
+        background-color: #ecf0f1; /* Cor clara (quase branco) */
+        color: #2c3e50; /* Cor escura (mesma do header) */
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1rem;
         text-decoration: none;
+        margin-bottom: 1.5rem; /* Espaçamento antes dos créditos */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .repo-link:hover {
+        background-color: #ffffff;
+        transform: translateY(-2px);
+        text-decoration: none; /* Remove sublinhado no hover */
     }
 
-    footer a:hover {
-        text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -139,12 +151,16 @@
   </main>
 
   <footer>
-    <p>Desenvolvido por Weslly Franco | Hospedado no GitHub Pages</p>
-    <p style="margin-top: 0.5rem;">
-        <a href="https://github.com/wesllyfranco/ferramentas-digitais-insetos" target="_blank" rel="noopener noreferrer">
-            Ver o Repositório no GitHub
+    <p>
+        <a href="https://github.com/wesllyfranco/ferramentas-digitais-insetos" 
+           class="repo-link" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            Ver o Repositório Principal no GitHub
         </a>
     </p>
+    
+    <p>Desenvolvido por Weslly Franco | Hospedado no GitHub Pages</p>
   </footer>
 </body>
 </html>
