@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Jogo da Memória - Insetos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            background-color: #f6f8fa;
+            color: #24292e;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            color: #0366d6;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            color: #24292e;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            /* Permite rolagem horizontal para o código */
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+        }
+
+        /* Classe para destacar o nome do arquivo */
+        .filename {
+            display: block;
+            background-color: #eaf5ff;
+            border: 1px solid #b3d9ff;
+            border-bottom: none;
+            padding: 0.5rem 1rem;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #0366d6;
+        }
+
+        /* Remove a margem superior do 'pre' quando ele segue um 'filename' */
+        .filename+pre {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        strong {
+            color: #005cc5;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        .note {
+            background-color: #fffbdd;
+            border: 1px solid #ffeb8e;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Tutorial: Crie seu Próprio Jogo da Memória - Insetos</h1>
+
+        <p>Olá, futuro programador! Bem-vindo ao seu segundo projeto.</p>
+        <p>Vamos construir, passo a passo, um "Jogo da Memória" com o tema de insetos. O objetivo é encontrar os pares corretos, que neste caso são o <strong>nome popular</strong> do inseto e sua <strong>classificação científica</strong> (Ordem).</p>
+        <p>Este tutorial foi feito para quem está começando, então vamos explicar cada detalhe!</p>
+
+        <section>
+            <h2>Parte 0: As Ferramentas e a Preparação</h2>
+            <p>Assim como no projeto anterior, precisamos organizar nossas ferramentas e nosso "terreno".</p>
+
+            <h3>1. A Ferramenta (O Editor de Texto)</h3>
+            <ul>
+                <li>Vamos usar o <strong>Visual Studio Code</strong> (VS Code) novamente.</li>
+            </ul>
+
+            <h3>2. O Terreno (A Pasta do Projeto)</h3>
+            <ul>
+                <li>Vamos criar uma nova pasta para este projeto. Não misture com os arquivos do "jogo-flashcard".</li>
+                <li><strong>Ação:</strong>
+                    <ol>
+                        <li>Vá para sua Área de Trabalho ou "Documentos".</li>
+                        <li>Clique com o botão direito do mouse e escolha <strong>Novo > Pasta</strong>.</li>
+                        <li>Dê a esta pasta o nome de <strong><code>jogo-da-memoria</code></strong>.</li>
+                        <li>Abra o <strong>Visual Studio Code</strong>, vá em <strong>File (Arquivo) > Open Folder... (Abrir Pasta...)</strong> e escolha a pasta <code>jogo-da-memoria</code>.</li>
+                    </ol>
+                </li>
+            </ul>
+            <p>Tudo pronto. Vamos criar 3 arquivos dentro desta pasta.</p>
+        </section>
+
+        <section>
+            <h2>Parte 1: O Esqueleto do Jogo (HTML)</h2>
+            <p>O <strong>HTML</strong> é a estrutura, os "ossos" da nossa página. Para este jogo, ele é bem simples. Precisamos apenas de três coisas:</p>
+            <ol>
+                <li>Um título (<code>&lt;h1&gt;</code>).</li>
+                <li>Uma "caixa" vazia para o nosso tabuleiro (<code>&lt;div id="game-board"&gt;</code>). O JavaScript vai preencher essa caixa com os cartões.</li>
+                <li>Um parágrafo para mostrar mensagens como "Você acertou!" (<code>&lt;p id="status"&gt;</code>).</li>
+            </ol>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Dentro do VS Code, na pasta <code>jogo-da-memoria</code>, crie um novo arquivo.</li>
+                <li>Dê o nome de <strong><code>index.html</code></strong>.</li>
+            </ul>
+
+            <h3>2. Escreva o código HTML:</h3>
+            <p>Copie e cole o código abaixo no seu arquivo <code>index.html</code>.</p>
+
+            <div class="filename">index.html</div>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Jogo da Memória - Insetos&lt;/title&gt;
+  
+  &lt;!-- 1. Ligando o arquivo de estilos (CSS) --&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Jogo da Memória: Insetos&lt;/h1&gt;
+  
+  &lt;!-- 2. O tabuleiro vazio. O JavaScript vai criar os cartões aqui --&gt;
+  &lt;div id="game-board"&gt;&lt;/div&gt;
+  
+  &lt;!-- 3. Onde as mensagens de status (Acertou/Errou) vão aparecer --&gt;
+  &lt;p id="status"&gt;&lt;/p&gt;
+
+  &lt;!-- 4. Ligando o arquivo de lógica (JavaScript) - IMPORTANTE ser no final --&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 2: A Aparência do Jogo (CSS)</h2>
+            <p>O <strong>CSS</strong> cuida da "decoração" (cores, tamanhos, layout). Aqui, a parte mais importante é o estilo do <code>.card</code> e o que acontece quando ele "vira" (a classe <code>.flipped</code>).</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Na mesma pasta, crie um novo arquivo.</li>
+                <li>Dê o nome de <strong><code>style.css</code></strong>.</li>
+            </ul>
+
+            <h3>2. Escreva o código CSS:</h3>
+            <p>Copie e cole o código abaixo no seu arquivo <code>style.css</code>.</p>
+
+            <div class="filename">style.css</div>
+            <pre><code class="language-css">body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+h1 {
+  margin-top: 20px;
+  color: #333;
+}
+
+/* --- O Tabuleiro --- */
+#game-board {
+  display: grid; /* Usamos "grid" para organizar os cartões em colunas */
+  
+  /* Cria 4 colunas, cada uma com 120px de largura */
+  grid-template-columns: repeat(4, 120px); 
+  
+  gap: 15px; /* Espaço entre os cartões */
+  justify-content: center; /* Centraliza o grid na página */
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+/* --- O Cartão (Verso) --- */
+.card {
+  width: 120px;
+  height: 120px;
+  background-color: #1c6dd0; /* Cor azul do "verso" do cartão */
+  border-radius: 8px;
+  cursor: pointer;
+  color: white; /* Cor do texto ("?") */
+  
+  /* Isso centraliza o texto "?" dentro do cartão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* --- O Cartão "Virado" (Frente) --- */
+/* Esta é a "mágica" do CSS. 
+   Quando um cartão tiver a classe "flipped" (que o JavaScript vai adicionar), 
+   ele vai mudar sua aparência para esta:
+*/
+.card.flipped {
+  background-color: #fff; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border: 2px solid #1c6dd0; /* Borda azul */
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 3: O Cérebro do Jogo (JavaScript)</h2>
+            <p>O <strong>JavaScript</strong> (<code>script.js</code>) é o "cérebro" que controla toda a lógica: embaralhar, virar cartas, verificar pares e terminar o jogo.</p>
+            <p>Este arquivo é o mais complexo, então vamos olhar por partes (embora você vá colar tudo de uma vez).</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Na mesma pasta, crie o último arquivo.</li>
+                <li>Dê o nome de <strong><code>script.js</code></strong>.</li>
+            </ul>
+
+            <h3>2. Escreva o código JavaScript:</h3>
+            <p>Copie e cole o código abaixo no seu arquivo <code>script.js</code>.</p>
+
+            <div class="filename">script.js</div>
+            <pre><code class="language-javascript">/* --- Bloco 1: Os Dados e Variáveis Iniciais --- */
+
+// Esta é a lista de pares. É A ÚNICA COISA que você precisa
+// mudar se quiser personalizar o jogo (mais insetos, animais, etc.)
+const pares = [
+  { nome: "Abelha", info: "Hymenoptera" },
+  { nome: "Joaninha", info: "Coleoptera" },
+  { nome: "Borboleta", info: "Lepidoptera" },
+  { nome: "Mosquito", info: "Diptera" }
+  // Adicione mais pares aqui!
+];
+
+let cartas = []; // Array vazio que vai guardar TODAS as 8 cartas
+
+// Vamos duplicar os pares e criar o array de "cartas"
+pares.forEach(par => {
+  // Adiciona a carta "nome" (ex: "Abelha")
+  cartas.push({ texto: par.nome, id: par.nome }); 
+  // Adiciona a carta "info" (ex: "Hymenoptera")
+  cartas.push({ texto: par.info, id: par.nome }); // Note que o 'id' é o mesmo!
+});
+
+// Embaralha as cartas. Este é um truque comum para embaralhar arrays.
+cartas = cartas.sort(() => 0.5 - Math.random());
+
+// "Variáveis de memória" do jogo
+const tabuleiro = document.getElementById('game-board');
+let cartasViradas = [];   // Guarda as 2 cartas que estão viradas no momento
+let cartasCorretas = [];  // Guarda os índices das cartas que já formaram par
+
+
+/* --- Bloco 2: A "Fábrica" de Cartões --- */
+
+// Esta função vai construir o tabuleiro
+function criarTabuleiro() {
+  // Para cada item no nosso array de "cartas" embaralhado...
+  cartas.forEach((carta, indice) => {
+    // 1. Crie um elemento <div> na memória
+    const div = document.createElement('div');
+    
+    // 2. Adicione a classe 'card' (para o CSS estilizar)
+    div.classList.add('card');
+    
+    // 3. Adicione "atributos de dados"
+    // O 'data-id' guarda o ID do par (ex: "Abelha")
+    div.setAttribute('data-id', carta.id);
+    // O 'data-indice' guarda a posição da carta no array (0, 1, 2, ...)
+    div.setAttribute('data-indice', indice);
+    
+    // 4. Coloque o texto inicial "?"
+    div.innerText = "?";
+    
+    // 5. Adicione um "ouvinte" de clique.
+    // Quando este <div> for clicado, ele vai chamar a função "virarCarta"
+    div.addEventListener('click', virarCarta);
+    
+    // 6. Coloque o <div> pronto dentro do tabuleiro na página
+    tabuleiro.appendChild(div);
+  });
+}
+
+/* --- Bloco 3: A Ação de Virar a Carta --- */
+
+// Esta função é chamada TODA VEZ que um cartão é clicado
+function virarCarta() {
+  // Se já temos 2 cartas viradas, não faça nada (espere elas serem checadas)
+  if (cartasViradas.length === 2) return;
+
+  const cartaClicada = this; // 'this' se refere ao <div> que foi clicado
+  
+  // Pega o índice que guardamos no 'data-indice'
+  const indice = cartaClicada.getAttribute('data-indice'); 
+  
+  // Pega os dados completos da carta (texto e id)
+  const dados = cartas[indice]; 
+
+  // Se a carta já está virada (flipped) ou já faz parte de um par (corretas),
+  // não faça nada.
+  if (cartaClicada.classList.contains('flipped') || cartasCorretas.includes(indice)) {
+    return;
+  }
+
+  // A MÁGICA ACONTECE AQUI:
+  // 1. Mostra o texto da carta (ex: "Abelha")
+  cartaClicada.innerText = dados.texto; 
+  // 2. Adiciona a classe 'flipped' (para o CSS mudar a cor)
+  cartaClicada.classList.add('flipped'); 
+  
+  // 3. Guarda a carta virada na nossa "memória de curto prazo"
+  cartasViradas.push({ indice: indice, id: dados.id }); 
+
+  // 4. Se esta é a SEGUNDA carta virada...
+  if (cartasViradas.length === 2) {
+    // ...chame a função que verifica se o par está certo.
+    verificarPar();
+  }
+}
+
+/* --- Bloco 4: A Verificação do Par --- */
+
+function verificarPar() {
+  const [carta1, carta2] = cartasViradas; // Pega as duas cartas da memória
+  const status = document.getElementById('status'); // Onde vamos escrever as mensagens
+
+  // Checa se o 'id' das duas é o mesmo (ex: "Abelha" === "Abelha")
+  // E também se não clicamos na *mesma carta* duas vezes
+  if (carta1.id === carta2.id && carta1.indice !== carta2.indice) {
+    // É UM PAR!
+    status.innerText = "Você acertou um par!";
+    // Adicionamos os índices na nossa "memória de longo prazo"
+    cartasCorretas.push(carta1.indice, carta2.indice);
+    
+  } else {
+    // NÃO É UM PAR!
+    status.innerText = "Tente novamente!";
+    
+    // Aqui usamos 'setTimeout' para dar um tempinho (800ms)
+    // para o jogador VER a segunda carta antes de desvirar.
+    setTimeout(() => {
+      const elementos = document.querySelectorAll('.card'); // Pega todos os cartões
+      
+      // Pega os elementos DOM das duas cartas que erramos
+      const el1 = elementos[carta1.indice];
+      const el2 = elementos[carta2.indice];
+      
+      // Desvira as duas
+      el1.innerText = "?";
+      el2.innerText = "?";
+      el1.classList.remove('flipped');
+      el2.classList.remove('flipped');
+      
+    }, 800); // 800 milissegundos = 0.8 segundos
+  }
+
+  // Limpa a "memória de curto prazo" para a próxima jogada
+  cartasViradas = [];
+
+  // Checagem de Vitória:
+  // Se o número de cartas corretas é igual ao total de cartas...
+  if (cartasCorretas.length === cartas.length) {
+    status.innerText = "Parabéns! Você completou o jogo!";
+  }
+}
+
+/* --- Bloco 5: Iniciar o Jogo --- */
+
+// Finalmente, chamamos a função "fábrica" para construir o jogo
+// assim que a página carrega.
+criarTabuleiro();
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 4: Como Testar, Personalizar e Publicar</h2>
+            
+            <h3>Como Testar</h3>
+            <ol>
+                <li>Verifique se você salvou os três arquivos (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>) na mesma pasta <code>jogo-da-memoria</code>.</li>
+                <li><strong>Dê um clique duplo no arquivo <code>index.html</code></strong>.</li>
+                <li>Ele vai abrir no seu navegador e o jogo deve funcionar!</li>
+            </ol>
+
+            <h3>Como Personalizar (Adicionar Mais Cartas)</h3>
+            <div class="note">
+                <p>Esta é a parte mais legal! Você pode facilmente mudar o tema do jogo.</p>
+                <p>Abra o arquivo <strong><code>script.js</code></strong> e vá até o topo, no "Bloco 1".</p>
+                <p>Encontre esta variável:</p>
+                <pre><code>const pares = [
+  { nome: "Abelha", info: "Hymenoptera" },
+  { nome: "Joaninha", info: "Coleoptera" },
+  ...
+];</code></pre>
+                <p>Para adicionar mais pares, basta adicionar novas linhas dentro dos colchetes <code>[ ]</code>, seguindo o mesmo modelo. Por exemplo, para adicionar "Formiga":</p>
+                <pre><code>const pares = [
+  { nome: "Abelha", info: "Hymenoptera" },
+  { nome: "Joaninha", info: "Coleoptera" },
+  { nome: "Borboleta", info: "Lepidoptera" },
+  { nome: "Mosquito", info: "Diptera" },
+  <strong>{ nome: "Formiga", info: "Hymenoptera" },</strong>
+  <strong>{ nome: "Besouro", info: "Coleoptera" }</strong>
+];</code></pre>
+                <p>O JavaScript cuida automaticamente de criar, embaralhar e ajustar o tabuleiro. (Atenção: o layout do CSS está para 4 colunas, então adicione pares em múltiplos de 2 para ficar bonito).</p>
+            </div>
+
+            <h3>Como Publicar no GitHub Pages</h3>
+            <p>Quer mostrar seu jogo para o mundo? É grátis e fácil:</p>
+            <ol>
+                <li>Crie um novo repositório no <a href="https://github.com" target="_blank">GitHub</a>.</li>
+                <li>Envie (faça "upload") seus três arquivos (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>) para esse repositório.</li>
+                <li>No seu repositório, vá em <strong>Settings (Configurações) > Pages</strong>.</li>
+                <li>Em "Source", selecione a branch <strong><code>main</code></strong> (ou <code>master</code>) e clique em "Save".</li>
+                <li>Depois de alguns segundos, o GitHub mostrará um link verde. Esse é o link do seu jogo online!</li>
+            </OL>
+        </section>
+
+        <section>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; margin-top: 2rem;">
+                <strong>Bom aprendizado e divirta-se programando!</strong>
+            </p>
+        </section>
+
+    </main>
+</body>
+
+</html>
