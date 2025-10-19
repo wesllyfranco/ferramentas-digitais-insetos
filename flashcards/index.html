@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Jogo FlashCard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            background-color: #f6f8fa;
+            color: #24292e;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            color: #0366d6;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            color: #24292e;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            /* Permite rolagem horizontal para o código */
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+        }
+
+        /* Classe para destacar o nome do arquivo */
+        .filename {
+            display: block;
+            background-color: #eaf5ff;
+            border: 1px solid #b3d9ff;
+            border-bottom: none;
+            padding: 0.5rem 1rem;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #0366d6;
+        }
+
+        /* Remove a margem superior do 'pre' quando ele segue um 'filename' */
+        .filename+pre {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        strong {
+            color: #005cc5;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Tutorial: Como Criar seu Próprio Jogo de Cartas (FlashCard)</h1>
+
+        <p>Olá, futuro programador! Bem-vindo ao seu primeiro projeto.</p>
+        <p>Vamos construir, passo a passo, um "Jogo de FlashCards". É um jogo onde você vê uma pergunta em um cartão e, ao
+            clicar nele, o cartão vira para revelar a resposta. É muito usado para estudar!</p>
+        <p>Não se preocupe se você nunca escreveu uma linha de código. Vamos fazer tudo juntos, do começo ao fim.</p>
+
+        <section>
+            <h2>Parte 0: As Ferramentas e a Preparação</h2>
+
+            <p>Antes de construir uma casa, você precisa de ferramentas e de um terreno. Na programação, é a mesma coisa.
+            </p>
+
+            <h3>1. A Ferramenta (O Editor de Texto)</h3>
+            <ul>
+                <li>Precisamos de um programa para <strong>escrever</strong> nosso código.</li>
+                <li>Recomendamos um programa gratuito chamado <strong>Visual Studio Code</strong> (ou "VS Code"). Ele é o
+                    mais usado no mundo, é fácil de usar e ajuda você colorindo o código.</li>
+                <li><strong>Ação:</strong> Peça ajuda para baixar e instalar o "Visual Studio Code" no seu computador.
+                </li>
+            </ul>
+
+            <h3>2. O Terreno (A Pasta do Projeto)</h3>
+            <ul>
+                <li>Não podemos deixar nossos arquivos jogados na Área de Trabalho. Vamos criar uma "pasta" para guardar
+                    todos os arquivos do nosso jogo.</li>
+                <li><strong>Ação:</strong>
+                    <ol>
+                        <li>Vá para sua Área de Trabalho ou para a pasta "Documentos".</li>
+                        <li>Clique com o botão direito do mouse e escolha <strong>Novo > Pasta</strong>.</li>
+                        <li>Dê a esta pasta o nome de <strong><code>jogo-flashcard</code></strong>.</li>
+                        <li>Abra o <strong>Visual Studio Code</strong>. No menu de cima, clique em <strong>File
+                                (Arquivo) > Open Folder... (Abrir Pasta...)</strong> e escolha a pasta
+                            <code>jogo-flashcard</code> que você acabou de criar.
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <p>Agora, estamos prontos! Toda a mágica vai acontecer dentro dessa pasta.</p>
+        </section>
+
+        <section>
+            <h2>Parte 1: O Esqueleto do Jogo (HTML)</h2>
+            <p>O primeiro arquivo que vamos criar é o <strong>HTML</strong>. Pense no HTML como os <strong>ossos</strong>
+                do nosso site. Ele diz "aqui vai ter um título", "aqui vai ser a área dos cartões", "aqui vai ser o
+                rodapé".</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Dentro do VS Code, na lateral esquerda (onde está o nome <code>jogo-flashcard</code>), clique no
+                    ícone de "Novo Arquivo" (parece uma folha de papel).</li>
+                <li>Dê o nome de <strong><code>index.html</code></strong> e aperte Enter. É <em>muito importante</em>
+                    que termine com <code>.html</code>.</li>
+            </ul>
+
+            <h3>2. Escreva o código HTML:</h3>
+            <p>Copie e cole o código abaixo exatamente como está dentro do seu arquivo <code>index.html</code>.</p>
+
+            <div class="filename">index.html</div>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- 1. Aqui estamos "linkando" nosso arquivo de estilo (que vamos criar) --&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    
+    &lt;title&gt;FlashCard&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;!-- 2. Esta é a "caixa" principal onde nossos cartões vão aparecer --&gt;
+        &lt;section id="container"&gt;
+          &lt;!-- Os cartões vão ser criados pelo JavaScript aqui dentro --&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;Projeto desenvolvido por Aluno - 2B &lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;!-- 3. Aqui estamos "chamando" nossos arquivos de cérebro (JavaScript) --&gt;
+    &lt;!-- A ordem é IMPORTANTE! Primeiro a "fábrica" (app.js), depois as "perguntas" (perguntas.js) --&gt;
+    &lt;script src="app.js"&gt;&lt;/script&gt;
+    &lt;script src="perguntas.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 2: A Aparência do Jogo (CSS)</h2>
+            <p>Nosso jogo ainda parece feio, só texto. Precisamos de <strong>CSS</strong>! Pense no CSS como as
+                <strong>roupas, a pintura e a decoração</strong> do nosso site. Ele cuida das cores, dos tamanhos e das
+                animações.</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Assim como antes, crie um novo arquivo na sua pasta <code>jogo-flashcard</code>.</li>
+                <li>Dê o nome de <strong><code>style.css</code></strong> e aperte Enter.</li>
+            </ul>
+
+            <h3>2. Escreva o código CSS:</h3>
+            <p>Copie e cole o código abaixo dentro do seu arquivo <code>style.css</code>.</p>
+
+            <div class="filename">style.css</div>
+            <pre><code class="language-css">:root {
+    /* Criamos "apelidos" para nossas cores, para ficar fácil de mudar depois */
+    --text-color: #dbe4ef;
+    --card-front-color: #144480;
+    --card-back-color: #0074bf;
+}
+
+body {
+    background: url('img/bg-desktop.webp'); /* Você pode trocar isso por uma cor, ex: background-color: #f0f0f0; */
+    font-family: 'Bai Jamjuree'; /* Tipo da letra */
+}
+
+#container {
+    display: flex; /* Coloca os cartões um ao lado do outro */
+    flex-wrap: wrap; /* Se não couber, joga para a linha de baixo */
+    justify-content: space-between; /* Espaçamento bonito */
+    padding: 4rem;
+    gap: 3rem; /* Espaço entre os cartões */
+}
+
+.cartao {
+    margin: 1rem 1rem;
+    height: 20rem; /* Altura do cartão */
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem); /* Tenta colocar 3 cartões por linha */
+}
+
+.cartao_conteudo {
+    background-color: var(--card-front-color); /* Cor da frente */
+    text-align: center;
+    height: 100%;
+    
+    /* --- A MÁGICA 3D COMEÇA AQUI --- */
+    transform-style: preserve-3d; /* Avisa que vai ter coisa 3D aqui dentro */
+    transition: transform 300ms ease-in-out; /* A animação de "virar" */
+}
+
+.cartao_conteudo h3 {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute; /* Posição "flutuante" */
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden; /* Esconde o que está "atrás" do cartão */
+}
+
+.cartao_conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 1.4vw;
+}
+
+.cartao_conteudo_pergunta p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.cartao_conteudo_resposta p {
+    color: var(--card-back-color);
+    font-weight: 700;
+}
+
+
+/* --- A MÁGICA 3D (CONTINUAÇÃO) --- */
+
+/* Esta é a regra que "vira" o cartão quando o JavaScript adiciona a classe "active" */
+.cartao.active .cartao_conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao_conteudo_pergunta,
+.cartao_conteudo_resposta {
+    backface-visibility: hidden; /* Esconde o "verso" de cada lado */
+    position: absolute; /* Coloca um em cima do outro */
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cartao_conteudo_resposta {
+    transform: rotateY(180deg); /* A resposta já começa "virada" */
+    background-color: rgba(0, 244, 191, 0.2);
+    border: 4px solid var(--card-back-color);
+}
+
+/* --- ESTILOS DO RODAPÉ --- */
+footer {
+    background-color: black;
+    color: white;
+    position: fixed; /* Deixa o rodapé fixo lá embaixo */
+    bottom: 0;
+    width: 100%;
+    heigth: 2rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+/* --- AJUSTES PARA CELULAR --- */
+@media (max-width: 560px) {
+    body {
+        background: url('img/bg-mobile.webp');
+    }
+
+    .cartao {
+        flex: 1 0 calc(100% - 1rem); /* Faz o cartão ocupar 100% da largura no celular */
+    }
+
+    .cartao_conteudo h3 {
+        font-size: 3vw;
+    }
+
+    .cartao_conteudo p {
+        font-size: 3.8vw
+    }
+}
+</code></pre>
+            <p><strong>Observação:</strong> O <code>background</code> usa imagens (<code>img/bg-desktop.webp</code>) que
+                não temos. O fundo pode ficar em branco, e isso é normal! Se quiser, troque as linhas
+                <code>background: url(...)</code> por <code>background-color: #f0f0f0;</code> para ter um fundo cinza
+                claro.
+            </p>
+        </section>
+
+        <section>
+            <h2>Parte 3: O Cérebro do Jogo (JavaScript - <code>app.js</code>)</h2>
+            <p>Até agora, só temos uma página bonita, mas sem vida. O <strong>JavaScript</strong> é o
+                <strong>cérebro</strong> do nosso jogo. Ele que faz as coisas <em>acontecerem</em>.</p>
+            <p>O <code>app.js</code> será nossa <strong>"Fábrica de Cartões"</strong>. Ele contém a <em>receita</em> (a
+                "função") de como construir um cartão.</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Crie um novo arquivo na sua pasta <code>jogo-flashcard</code>.</li>
+                <li>Dê o nome de <strong><code>app.js</code></strong> e aperte Enter.</li>
+            </ul>
+
+            <h3>2. Escreva o código JavaScript:</h3>
+            <p>Copie e cole o código abaixo dentro do seu arquivo <code>app.js</code>.</p>
+
+            <div class="filename">app.js</div>
+            <pre><code class="language-javascript">/* Isto é uma "Função".
+  Pense nela como uma "receita de bolo" chamada "criaCartao".
+  Para ela funcionar, ela precisa de 3 ingredientes:
+  1. categoria
+  2. pergunta
+  3. resposta
+*/
+function criaCartao(categoria, pergunta, resposta) {
+  
+  // 1. Encontra a "caixa container" que fizemos no HTML
+  let container = document.getElementById('container');
+
+  // 2. Cria um novo elemento &lt;article&gt; (o cartão) na memória
+  let cartao = document.createElement('article');
+  
+  // 3. Dá ao cartão uma "etiqueta" (classe) chamada "cartao", para o CSS saber estilizá-lo
+  cartao.className = 'cartao';
+
+
+  // 4. Aqui colocamos todo o HTML da "pergunta" e "resposta" dentro do cartão
+  cartao.innerHTML = `
+   &lt;div class="cartao_conteudo"&gt;
+                    &lt;h3&gt;${categoria}&lt;/h3&gt;
+                    &lt;div class="cartao_conteudo_pergunta"&gt;
+                        &lt;p&gt;${pergunta}&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cartao_conteudo_resposta"&gt;
+                        &lt;p&gt;${resposta}&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                `
+  
+  // 5. Agora, colocamos um "ouvinte" no cartão
+  //    É como dizer: "Ei, cartão, fique esperando por um clique!"
+  cartao.addEventListener('click', function() {
+    
+    // 6. Quando o clique acontecer, adicione ou remova a classe "active"
+    //    É como um interruptor de luz. O CSS vai ver essa classe e vai "virar" o cartão.
+    cartao.classList.toggle('active');
+  });
+  
+  // 7. Por fim, pegamos o cartão que criamos na memória e o colocamos
+  //    dentro do "container" na nossa página.
+  container.appendChild(cartao);
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 4: As Perguntas (JavaScript - <code>perguntas.js</code>)</h2>
+            <p>Nossa "fábrica" (<code>app.js</code>) está pronta. Mas ela não faz nada sozinha. Precisamos <em>usar</em>
+                a fábrica!</p>
+            <p>O arquivo <code>perguntas.js</code> é a "linha de produção". É aqui que vamos chamar a receita
+                <code>criaCartao</code> várias vezes, passando os ingredientes (as perguntas) que queremos.</p>
+
+            <h3>1. Crie o arquivo:</h3>
+            <ul>
+                <li>Crie um novo arquivo na sua pasta <code>jogo-flashcard</code>.</li>
+                <li>Dê o nome de <strong><code>perguntas.js</code></strong> e aperte Enter.</li>
+            </ul>
+
+            <h3>2. Escreva o código JavaScript:</h3>
+            <p>Copie e cole o código abaixo dentro do seu arquivo <code>perguntas.js</code>.</p>
+
+            <div class="filename">perguntas.js</div>
+            <pre><code class="language-javascript">// Aqui estamos "chamando" a receita (função) que fizemos no app.js
+
+// Cartão 1
+criaCartao(
+    'Futebol',
+    'Qual seleção tem mais copas do mundo?',
+    'Brasil'
+)
+
+// Cartão 2
+criaCartao(
+    'Programação',
+    'O que é HTML?',
+    'Linguagem de Marcação'
+)
+
+// Cartão 3
+criaCartao(
+    'Programação',
+    'O que é CSS?',
+    'Linguagem de Estilo'
+)
+
+// Cartão 4
+criaCartao(
+    'Geografia',
+    'Qual a capital da França?',
+    'Paris'
+)
+
+// Cartão 5
+criaCartao(
+    'Ciências',
+    'Qual o símbolo químico da água?',
+    'H₂O'
+)
+</code></pre>
+
+            <h3>Quer adicionar mais cartões?</h3>
+            <p>É fácil! Basta copiar e colar o bloco abaixo no fim do arquivo <code>perguntas.js</code> e trocar o
+                conteúdo:</p>
+            <pre><code class="language-javascript">criaCartao(
+    'SUA CATEGORIA',
+    'SUA PERGUNTA',
+    'SUA RESPOSTA'
+)
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Parte 5: A Hora da Verdade! (Como Ver o Jogo)</h2>
+            <p>Terminamos! Você criou 4 arquivos:</p>
+            <ol>
+                <li><code>index.html</code> (o esqueleto)</li>
+                <li><code>style.css</code> (a aparência)</li>
+                <li><code>app.js</code> (a fábrica de cartões)</li>
+                <li><code>perguntas.js</code> (a lista de perguntas)</li>
+            </ol>
+
+            <h3>Para jogar:</h3>
+            <ol>
+                <li>Abra a pasta <code>jogo-flashcard</code> no seu computador (fora do VS Code, no explorador de
+                    arquivos).</li>
+                <li>Você verá os 4 arquivos que criou.</li>
+                <li><strong>Dê um clique duplo no arquivo <code>index.html</code></strong></li>
+                <li>Ele vai abrir no seu navegador de internet (Google Chrome, Firefox, etc.) e... o seu jogo vai estar
+                    funcionando!</li>
+            </ol>
+
+            <p>Clique nos cartões para ver a mágica acontecer.</p>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; margin-top: 2rem;">
+                <strong>Parabéns! Você acabou de construir um jogo da web completo do zero!</strong>
+            </p>
+        </section>
+
+    </main>
+</body>
+
+</html>
