@@ -146,3 +146,56 @@ footer {
 footer a {
     color: #ecf0f1;
 }
+
+
+/* Este é o container da grade */
+.sketchfab-grid {
+  display: grid;
+  /* Cria colunas automáticas:
+    - Elas terão no mínimo 300px.
+    - Se houver espaço, elas se ajustarão (1fr) para preencher.
+    - Em telas pequenas, ele automaticamente vira uma coluna só.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* Espaço entre os modelos */
+  margin-top: 1.5rem;
+}
+
+/* Este é o "card" que segura CADA modelo (iframe + créditos).
+  Usamos o nome de classe que o Sketchfab fornece.
+*/
+.sketchfab-embed-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que o iframe não "vaze" */
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column; /* Coloca o iframe em cima e os créditos embaixo */
+}
+
+/* O iframe do modelo 3D */
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* Proporção 4:3 (mais "quadrado") */
+  border: 0;
+}
+
+/* O parágrafo de créditos */
+.sketchfab-embed-wrapper p {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 12px;
+  color: #4A4A4A;
+  text-align: center;
+  line-height: 1.4;
+  border-top: 1px solid #ddd; /* Linha fina separando o modelo dos créditos */
+}
+
+/* Links nos créditos */
+.sketchfab-embed-wrapper p a {
+  font-weight: bold; 
+  color: #1CAAD9; /* Cor padrão do Sketchfab */
+}
+
