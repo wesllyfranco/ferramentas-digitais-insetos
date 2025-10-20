@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Crie um Quiz de Insetos com Wayground</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            background-color: #f6f8fa;
+            color: #24292e;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            color: #0366d6;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            color: #24292e;
+        }
+        
+        h4 {
+            margin-top: 1.5rem;
+            color: #1a5b9c;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        strong {
+            color: #005cc5;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .note {
+            background-color: #eaf5ff;
+            border: 1px solid #b3d9ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+        }
+        
+        .note strong {
+            color: #0366d6;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Tutorial: Crie um Quiz Interativo de Insetos com Wayground</h1>
+
+        <p>Olá, professor(a)! Bem-vindo(a) a este guia passo a passo.</p>
+        <p>Vamos aprender a criar um <strong>Quiz Interativo</strong> sobre a diversidade de insetos utilizando a plataforma gratuita <strong>Wayground</strong> (anteriormente conhecida como Quizizz). Esta ferramenta é fantástica para engajar os(as) alunos(as) e revisar conteúdos de forma divertida e tecnológica.</p>
+        <p>Este tutorial foi pensado para quem nunca usou a plataforma, explicando cada etapa do processo.</p>
+
+        <!-- ============================ -->
+        <!-- PARTE 0: PREPARAÇÃO -->
+        <!-- ============================ -->
+        <section>
+            <h2>Parte 0: Preparação e Primeiro Acesso</h2>
+            <p>Antes de criar as perguntas, precisamos preparar nosso ambiente de trabalho, que é a plataforma Wayground.</p>
+
+            <h3>1. Acesse o site e crie sua conta</h3>
+            <ol>
+                <li>Abra seu navegador de internet e acesse o site: <strong><a href="https://wayground.com/" target="_blank">wayground.com</a></strong></li>
+                <li>No canto superior direito, clique em <strong>"Inscrever-se"</strong> (ou "Sign up").</li>
+                <li>A forma mais fácil é se inscrever usando sua conta do Google ou da Microsoft. Isso economiza tempo e você não precisa criar uma nova senha.</li>
+                <li>Durante o cadastro, a plataforma perguntará como você pretende usá-la. Escolha a opção <strong>"Em uma escola"</strong> (ou "At a school") e depois se identifique como <strong>"Professor(a)"</strong> (ou "Teacher").</li>
+            </ol>
+            <p>Pronto! Com a conta criada, você será levado(a) ao painel principal da plataforma.</p>
+        </section>
+
+        <!-- ============================ -->
+        <!-- PARTE 1: CRIANDO SEU PRIMEIRO QUIZ -->
+        <!-- ============================ -->
+        <section>
+            <h2>Parte 1: Criando seu Primeiro Quiz</h2>
+            <p>Agora que estamos no painel, vamos começar a criar o nosso questionário sobre insetos.</p>
+            
+            <h3>2. Inicie a criação</h3>
+            <ul>
+                <li>No menu lateral esquerdo, procure e clique no botão roxo <strong>"+ Criar"</strong> (ou "+ Create").</li>
+                <li>Uma janela aparecerá perguntando o que você deseja criar. Selecione a opção <strong>"Quiz"</strong>.</li>
+            </ul>
+            
+            <h3>3. Configure as informações básicas</h3>
+            <ul>
+                <li><strong>Nome do quiz:</strong> Dê um título claro para sua atividade. Ex: <code>Diversidade de Insetos</code>.</li>
+                <li><strong>Matéria:</strong> Selecione a matéria correspondente, como <code>Biologia</code> ou <code>Ciências</code>.</li>
+                <li>Após preencher, clique em <strong>"Próximo"</strong> (ou "Next").</li>
+            </ul>
+            <p>Agora você está na tela de construção das perguntas. É aqui que a mágica acontece!</p>
+        </section>
+
+        <!-- ============================ -->
+        <!-- PARTE 2: ADICIONANDO PERGUNTAS -->
+        <!-- ============================ -->
+        <section>
+            <h2>Parte 2: Adicionando Perguntas ao Quiz</h2>
+            <p>Um bom quiz mistura diferentes tipos de perguntas para manter o interesse dos alunos. Vamos criar nossa primeira pergunta de múltipla escolha.</p>
+
+            <h3>4. Crie uma pergunta de Múltipla Escolha</h3>
+            <ol>
+                <li>Na tela de criação, clique na opção <strong>"Múltipla escolha"</strong>.</li>
+                <li><strong>Escreva sua pergunta:</strong> No campo principal, digite a pergunta. Por exemplo: <code>Qual dessas ordens de insetos possui o primeiro par de asas endurecido, formando élitros?</code></li>
+                <li><strong>Adicione uma imagem (Opcional, mas recomendado!):</strong> Clique no ícone de imagem ao lado do campo da pergunta para adicionar um recurso visual. Isso é ótimo para perguntas de identificação.</li>
+                <li><strong>Preencha as opções de resposta:</strong> Digite uma alternativa em cada campo (Opção 1, Opção 2, etc.). Ex: <code>Diptera</code>, <code>Lepidoptera</code>, <code>Coleoptera</code>, <code>Hymenoptera</code>.</li>
+                <li><strong>Marque a resposta correta:</strong> Ao lado da alternativa correta (neste caso, "Coleoptera"), clique no círculo para que ele fique verde.</li>
+                <li><strong>Defina o tempo:</strong> No final da página, você pode ajustar o tempo que os alunos terão para responder (ex: 30 segundos).</li>
+                <li>Quando terminar, clique em <strong>"Salvar pergunta"</strong>.</li>
+            </ol>
+            
+            <h3>5. Adicione mais perguntas e varie os estilos</h3>
+            <p>Para deixar seu quiz mais rico, não se limite à morfologia. Pense em perguntas que abordem ecologia, evolução e comportamento.</p>
+            
+            <div class="note">
+                <strong>💡 Dicas de Boas Perguntas:</strong>
+                <ul>
+                    <li><strong>Verdadeiro ou Falso:</strong> "Todas as abelhas morrem após picar. (Falso)"</li>
+                    <li><strong>Associação de Imagens:</strong> Use uma imagem de uma joaninha e pergunte: "A qual ordem pertence o inseto da imagem?".</li>
+                    <li><strong>Ecologia:</strong> "Qual nome se dá à interação ecológica entre formigas e pulgões, onde as formigas os protegem em troca de uma substância açucarada?"</li>
+                    <li><strong>Evolução:</strong> "As asas das borboletas e as asas dos morcegos são exemplos de estruturas análogas ou homólogas?"</li>
+                </ul>
+            </div>
+            <p>Continue adicionando quantas perguntas desejar. O ideal é ter entre 5 a 10 perguntas para uma atividade dinâmica.</p>
+
+            <h3>6. Salve o Quiz</h3>
+            <ul>
+                <li>Quando tiver adicionado todas as suas perguntas, clique no botão <strong>"Publicar"</strong> (ou "Publish") no canto superior direito.</li>
+                <li>Uma janela pedirá para você adicionar uma imagem de capa e selecionar o idioma. Isso é opcional. Apenas clique em <strong>"Salvar"</strong>.</li>
+            </ul>
+        </section>
+
+        <!-- ============================ -->
+        <!-- PARTE 3: APLICANDO O QUIZ COM OS ALUNOS -->
+        <!-- ============================ -->
+        <section>
+            <h2>Parte 3: Aplicando o Quiz com os Alunos</h2>
+            <p>Seu quiz está pronto! Agora, existem duas formas principais de usá-lo em aula.</p>
+
+            <h3>Opção A: Jogo ao Vivo (Recomendado para sala de aula)</h3>
+            <p>Neste modo, o(a) professor(a) controla o ritmo, exibindo as perguntas uma a uma no projetor. Os alunos respondem em seus próprios dispositivos.</p>
+            <ol>
+                <li>Após salvar o quiz, clique em <strong>"Iniciar um quiz ao vivo"</strong>.</li>
+                <li>Selecione o modo <strong>"Clássico"</strong>.</li>
+                <li>Na tela seguinte, você pode ajustar algumas configurações. Apenas clique em <strong>"Continuar"</strong>.</li>
+                <li>Uma tela com um <strong>código de acesso</strong> de 6 dígitos e um QR Code aparecerá.</li>
+                <li><strong>Peça aos alunos para:</strong>
+                    <ul>
+                        <li>Acessarem o site <strong>wayground.com/join</strong> em seus celulares ou computadores.</li>
+                        <li>Inserirem o código do jogo e um apelido.</li>
+                    </ul>
+                </li>
+                <li>Quando todos os alunos estiverem na sala de espera virtual, clique em <strong>"Começar"</strong> para iniciar o quiz!</li>
+            </ol>
+
+            <h3>Opção B: Tarefa de Casa (Modo Assíncrono)</h3>
+            <p>Neste modo, você gera um link que os alunos podem acessar quando quiserem, dentro de um prazo que você define.</p>
+            <ol>
+                <li>Na tela do quiz, clique em <strong>"Atribuir lição de casa"</strong> (ou "Assign homework").</li>
+                <li>Defina a data e o horário limite para a conclusão.</li>
+                <li>Clique em <strong>"Atribuir"</strong>. A plataforma gerará um link.</li>
+                <li>Copie e compartilhe este link com os alunos através do Google Sala de Aula, WhatsApp ou qualquer outro meio de comunicação.</li>
+            </ol>
+        </section>
+        
+        <!-- ============================ -->
+        <!-- PARTE 4: ALTERNATIVA SEM INTERNET -->
+        <!-- ============================ -->
+        <section>
+            <h2>Parte 4: Alternativa para Baixa Conectividade: O "Modo Papel"</h2>
+            <p>Uma das melhores funcionalidades do Wayground é o Modo Papel. Ele permite que a turma participe da mesma dinâmica, mesmo que os alunos não tenham acesso à internet ou a dispositivos. Apenas o(a) professor(a) precisa de um smartphone.</p>
+
+            <h3>Como usar o Modo Papel:</h3>
+            <ol>
+                <li>Na tela de início do quiz ao vivo, procure pela opção <strong>"Modo Papel"</strong> (ou "Paper Mode") e ative-a.</li>
+                <li>A plataforma fornecerá um link para baixar e imprimir cartões de resposta únicos para cada aluno. Cada cartão tem um código QR e as letras A, B, C, D.</li>
+                <li><strong>Em sala de aula:</strong>
+                    <ul>
+                        <li>Distribua um cartão para cada aluno.</li>
+                        <li>Projete a pergunta na lousa.</li>
+                        <li>Cada aluno responde levantando seu cartão, com a letra da alternativa escolhida (A, B, C ou D) virada para cima.</li>
+                        <li>Use o aplicativo Wayground no seu celular para <strong>escanear a sala</strong>. A câmera do seu celular lerá todos os cartões de uma vez e registrará as respostas de cada aluno instantaneamente!</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Dessa forma, a atividade mantém a interatividade e a coleta de dados em tempo real, promovendo a inclusão de todos os alunos.</p>
+        </section>
+        
+        <!-- ============================ -->
+        <!-- CONCLUSÃO -->
+        <!-- ============================ -->
+        <section>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; margin-top: 2rem;">
+                <strong>Parabéns! Você agora sabe como criar e aplicar quizzes envolventes para suas aulas!</strong>
+            </p>
+        </section>
+
+    </main>
+</body>
+
+</html>
