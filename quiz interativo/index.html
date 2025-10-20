@@ -88,6 +88,26 @@
         .note strong {
             color: #0366d6;
         }
+
+        /* Estilos para o vídeo responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -98,6 +118,17 @@
         <p>Olá, professor(a)! Bem-vindo(a) a este guia passo a passo.</p>
         <p>Vamos aprender a criar um <strong>Quiz Interativo</strong> sobre a diversidade de insetos utilizando a plataforma gratuita <strong>Wayground</strong> (anteriormente conhecida como Quizizz). Esta ferramenta é fantástica para engajar os(as) alunos(as) e revisar conteúdos de forma divertida e tecnológica.</p>
         <p>Este tutorial foi pensado para quem nunca usou a plataforma, explicando cada etapa do processo.</p>
+
+        <!-- ============================ -->
+        <!-- VÍDEO TUTORIAL -->
+        <!-- ============================ -->
+        <section>
+            <h2>Vídeo Tutorial</h2>
+            <p>Assista ao vídeo abaixo para ter uma visão geral do processo de criação de um quiz na plataforma Wayground.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Db7JvfexT-Q?si=aKOH9u5pW7nGMCNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
 
         <!-- ============================ -->
         <!-- PARTE 0: PREPARAÇÃO -->
