@@ -99,7 +99,33 @@ footer {
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-/* Estrutura do carrossel */
+/* === TIPOS DE GRADE === */
+
+/* 1. Grade Estática (Destaques) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* 2. Grade Carrossel (Categorias) */
+.carousel-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0 2rem 0;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Controles do carrossel */
 .carousel-wrapper {
     position: relative;
     display: flex;
@@ -139,26 +165,8 @@ footer {
     right: -20px;
 }
 
-/* Grade de vídeos e rolagem horizontal */
-.video-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 0 2rem 0;
-    width: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.video-grid::-webkit-scrollbar {
-    display: none;
-}
-
-/* Cards de vídeo */
+/* Cards de vídeo genéricos */
 .video-card {
-    flex: 0 0 calc(33.333% - 1.34rem);
-    scroll-snap-align: start;
     background-color: #ffffff;
     border: 1px solid #d1d5da;
     border-radius: 8px;
@@ -167,6 +175,12 @@ footer {
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Ajuste específico do card quando está dentro do carrossel */
+.carousel-grid .video-card {
+    flex: 0 0 calc(33.333% - 1.34rem);
+    scroll-snap-align: start;
 }
 
 .video-card:hover {
@@ -227,7 +241,10 @@ footer {
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .video-card {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .carousel-grid .video-card {
         flex: 0 0 calc(50% - 1rem);
     }
 }
@@ -236,15 +253,15 @@ footer {
     .container {
         padding: 1rem;
     }
-
     header h1 {
         font-size: 2rem;
     }
-
-    .video-card {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .carousel-grid .video-card {
         flex: 0 0 100%;
     }
-
     .carousel-btn {
         display: none;
     }
