@@ -14,477 +14,409 @@
         <header>
             <h1>Repositório de Vídeos: Biologia de Insetos</h1>
             <p>
-                Explore esta coleção de vídeos selecionados para aprofundar seu conhecimento sobre o fascinante mundo
-                dos insetos, suas características, comportamentos e interações ecológicas.
+                Explore esta coleção de vídeos selecionados para aprofundar seu conhecimento sobre o fascinante mundo dos insetos, suas características, comportamentos e interações ecológicas.
             </p>
         </header>
 
         <!-- Menu de navegação -->
         <nav class="category-nav">
             <a href="#destaques">Destaques</a>
+            <a href="#taxonomia">Taxonomia</a>
             <a href="#morfologia">Morfologia</a>
             <a href="#ecologia">Ecologia</a>
-            <a href="#taxonomia">Taxonomia</a>
             <a href="#classificacao">Ordens</a>
             <a href="#medica">Importância Médica</a>
         </nav>
 
-       <!-- Seção: Destaques (Grid no Desktop / Carrossel no Mobile) -->
-<div id="destaques" class="category-section">
-    <h2 class="section-title">Vídeos em Destaque</h2>
+        <!-- Seção: Destaques (Grid no Desktop / Carrossel no Mobile) -->
+        <div id="destaques" class="category-section">
+            <h2 class="section-title">Vídeos em Destaque (Sala de Aula)</h2>
+            <div class="carousel-wrapper carousel-mobile">
+                <button class="carousel-btn prev mobile-only-btn" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                
+                <main class="video-grid">
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/-Fi0yTuwRic" title="A Comunicação Das Formigas" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>A Comunicação Das Formigas</h2>
+                            <p>Este vídeo didático explica como as formigas utilizam diferentes compostos químicos (feromônios) para se comunicar e recrutar companheiras.</p>
+                            <a href="https://www.youtube.com/watch?v=-Fi0yTuwRic" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
 
-    <!-- Wrapper que ativa os controles no Mobile -->
-    <div class="carousel-wrapper carousel-mobile">
-        <!-- Botão de voltar (exibido apenas no mobile via CSS) -->
-        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/V1wdRRPvczw" title="Existem formigas paramédicas" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Existem formigas paramédicas?</h2>
+                            <p>Do canal Super Novas, este vídeo curto revela um comportamento social complexo em formigas: o resgate de feridas. Um exemplo de cooperação.</p>
+                            <a href="https://www.youtube.com/watch?v=V1wdRRPvczw" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
 
-        <!-- A classe 'carousel-grid' garante o alinhamento horizontal no mobile -->
-        <main class="video-grid carousel-grid">
-            
-            <!-- Vídeo 1 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/-Fi0yTuwRic" title="A Comunicação Das Formigas"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>A Comunicação Das Formigas</h2>
-                    <p>Este vídeo didático explica como as formigas utilizam diferentes compostos químicos (feromônios) para se comunicar, recrutando companheiras para encontrar alimento ou alertando sobre perigos.</p>
-                    <a href="https://www.youtube.com/watch?v=-Fi0yTuwRic" target="_blank">Ver no YouTube</a>
-                </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/bhOP5vZnTmk" title="Insetos: Biodiversidade, Importância e Classificação" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Insetos: Biodiversidade e Classificação</h2>
+                            <p>Uma aula completa que explora a anatomia dos artrópodes, com foco na classe Insecta. Aborda a classificação nas principais ordens.</p>
+                            <a href="https://www.youtube.com/watch?v=bhOP5vZnTmk" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Metamorfose da Borboleta</h2>
+                            <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta (larva), crisálida (pupa) e a fase adulta.</p>
+                            <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s" title="Como o fim das abelhas pode acabar com a humanidade" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>O Colapso das Abelhas</h2>
+                            <p>Este vídeo explica o papel vital das abelhas na polinização global e discute os riscos reais do desaparecimento desses insetos.</p>
+                            <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/2s4MgvvXgrI" title="Controle Biológico de Pragas" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Controle Biológico: Úteis vs Pragas</h2>
+                            <p>Produzido pela Embrapa, este vídeo demonstra como insetos predadores e parasitoides são utilizados como inimigos naturais.</p>
+                            <a href="https://www.youtube.com/watch?v=2s4MgvvXgrI" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                </main>
+                
+                <button class="carousel-btn next mobile-only-btn" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
+        </div>
 
-            <!-- Vídeo 2 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/V1wdRRPvczw" title="Existem formigas paramédicas"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Existem formigas paramédicas?</h2>
-                    <p>Do canal Super Novas, este vídeo curto revela um comportamento social complexo em formigas: o resgate de feridas. Um exemplo fascinante de cooperação na colônia.</p>
-                    <a href="https://www.youtube.com/watch?v=V1wdRRPvczw" target="_blank">Ver no YouTube</a>
-                </div>
+        <!-- Seção: Taxonomia e Nomenclatura -->
+        <div id="taxonomia" class="category-section">
+            <h2 class="section-title">Taxonomia e Nomenclatura</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                <main class="carousel-grid">
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/SWXSbyfqUm4" title="Nomenclatura e classificação" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Classificação dos Organismos</h2>
+                            <p>Uma visão abrangente sobre como a ciência organiza a vida, abordando desde os níveis de Lineu até a classificação em reinos e domínios.</p>
+                            <a href="https://www.youtube.com/watch?v=SWXSbyfqUm4" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/xizNS8y0qXE" title="Nomenclatura Binomial" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Nomenclatura e Regras de Escrita</h2>
+                            <p>Explora o sistema binomial e as regras universais que permitem a cientistas de todo o mundo identificarem a mesma espécie sem erros.</p>
+                            <a href="https://www.youtube.com/watch?v=xizNS8y0qXE" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s" title="Evolução e Filogenia" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Sistemática e Filogenia</h2>
+                            <p>Entenda a diferença entre taxonomia e sistemática e como interpretar as relações evolutivas através da análise de parentesco.</p>
+                            <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/Ssh_S90SWhA" title="Cladogramas" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Interpretação de Cladogramas</h2>
+                            <p>Aula prática sobre como ler árvores filogenéticas e entender os conceitos de nós, ramos e grupos monofiléticos na biologia moderna.</p>
+                            <a href="https://www.youtube.com/watch?v=Ssh_S90SWhA" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                </main>
+                <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
+        </div>
 
-            <!-- Vídeo 3 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/bhOP5vZnTmk"
-                        title="Insetos: Biodiversidade, Importância e Classificação" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Insetos: Biodiversidade e Classificação</h2>
-                    <p>Uma aula completa que explora a anatomia dos artrópodes, com foco na classe Insecta. Aborda a classificação nas principais ordens e características evolutivas.</p>
-                    <a href="https://www.youtube.com/watch?v=bhOP5vZnTmk" target="_blank">Ver no YouTube</a>
-                </div>
+        <!-- Seção: Morfologia e Ciclo de Vida -->
+        <div id="morfologia" class="category-section">
+            <h2 class="section-title">Morfologia e Ciclo de Vida</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
+                <main class="carousel-grid">
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/3tH6GZLHyBg" title="O Ciclo de Vida da Borboleta" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>O Ciclo de Vida da Borboleta</h2>
+                            <p>Aprenda o maravilhoso ciclo de vida da borboleta, e veja a incrível transformação e os processos biológicos.</p>
+                            <a href="https://www.youtube.com/watch?v=3tH6GZLHyBg" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/mI1gyjrZrSw" title="Como as lagartas se transformam em borboletas?" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Como as lagartas se transformam?</h2>
+                            <p>Explicação científica detalhada focada no que realmente acontece dentro da crisálida durante a metamorfose.</p>
+                            <a href="https://www.youtube.com/watch?v=mI1gyjrZrSw" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta: Fases do Ciclo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Metamorfose: Fases do Ciclo</h2>
+                            <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta, crisálida e a fase adulta.</p>
+                            <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/l7UbC-8b_ak" title="Morfologia externa dos insetos" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Morfologia Externa dos Insetos</h2>
+                            <p>Aula sobre a divisão do corpo em cabeça, tórax e abdome, explorando o exoesqueleto e apêndices articulados.</p>
+                            <a href="https://www.youtube.com/watch?v=l7UbC-8b_ak" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/VOY9EmwpOMw" title="Anatomia e Fisiologia Interna" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Anatomia e Fisiologia Interna</h2>
+                            <p>Um estudo sobre os sistemas internos dos insetos, incluindo os sistemas digestório, circulatório e respiratório.</p>
+                            <a href="https://www.youtube.com/watch?v=VOY9EmwpOMw" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/-nouiGi5jWE" title="Desenvolvimento e Metamorfose" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Desenvolvimento e Metamorfose</h2>
+                            <p>Entenda as diferenças entre o desenvolvimento ametábolo, hemimetábolo e holometábolo nas ordens de insetos.</p>
+                            <a href="https://www.youtube.com/watch?v=-nouiGi5jWE" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/NTBqL8-FLdw" title="Aparelhos Bucais dos Insetos" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Aparelhos Bucais e Adaptações</h2>
+                            <p>Conheça a diversidade de aparelhos bucais e como eles refletem o hábito alimentar de cada espécie.</p>
+                            <a href="https://www.youtube.com/watch?v=NTBqL8-FLdw" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/rkhDAExpwlg" title="Asas e Mecanismos de Voo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Asas e Mecanismos de Voo</h2>
+                            <p>Uma análise morfológica sobre os tipos de asas e os complexos mecanismos musculares que permitem o voo.</p>
+                            <a href="https://www.youtube.com/watch?v=rkhDAExpwlg" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                </main>
+                <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
+        </div>
 
-            <!-- Vídeo 4 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Metamorfose da Borboleta</h2>
-                    <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta (larva), crisálida (pupa) e a fase adulta, explicando as transformações biológicas envolvidas.</p>
-                    <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 5 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s"
-                        title="Como o fim das abelhas pode acabar com a humanidade" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>O Colapso das Abelhas e o Impacto na Humanidade</h2>
-                    <p>Este vídeo explica o papel vital das abelhas na polinização global e discute os riscos reais do desaparecimento desses insetos para a segurança alimentar.</p>
-                    <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 6 -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/2s4MgvvXgrI" title="Controle Biológico de Pragas"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Controle Biológico: Insetos Úteis vs Pragas</h2>
-                    <p>Produzido pela Embrapa, este vídeo demonstra como insetos predadores e parasitoides são utilizados como inimigos naturais para controlar pragas agrícolas.</p>
-                    <a href="https://www.youtube.com/watch?v=2s4MgvvXgrI" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-        </main>
-
-        <!-- Botão de avançar (exibido apenas no mobile via CSS) -->
-        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
-    </div>
-</div>
-
-       <!-- Seção: Morfologia (Com carrossel) -->
-<div id="morfologia" class="category-section">
-    <h2 class="section-title">Morfologia e Ciclo de Vida</h2>
-    <div class="carousel-wrapper">
-        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-
-        <main class="carousel-grid">
-            <!-- Vídeo 1: Ciclo de Vida da Borboleta -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/3tH6GZLHyBg" title="O Ciclo de Vida da Borboleta" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>O Ciclo de Vida da Borboleta</h2>
-                    <p>Venha aprender o maravilhoso ciclo de vida da borboleta, e veja a incrível transformação e os processos biológicos que ocorrem desde a fase de lagarta.</p>
-                    <a href="https://www.youtube.com/watch?v=3tH6GZLHyBg" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 2: Fisiologia da Metamorfose -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/mI1gyjrZrSw" title="Como as lagartas se transformam em borboletas?" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Como as lagartas se transformam?</h2>
-                    <p>Uma explicação científica detalhada focada no que realmente acontece dentro da crisálida, desmistificando o processo fisiológico durante a metamorfose.</p>
-                    <a href="https://www.youtube.com/watch?v=mI1gyjrZrSw" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 3: Fases do Ciclo de Vida -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta: Conheça as Fases do Ciclo de Vida Completo" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Metamorfose da Borboleta: Fases do Ciclo</h2>
-                    <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta, crisálida e a fase adulta, explicando as transformações biológicas envolvidas.</p>
-                    <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 4: Morfologia Externa -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/l7UbC-8b_ak" title="Morfologia externa dos insetos" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Morfologia Externa dos Insetos</h2>
-                    <p>Aula detalhada sobre a divisão do corpo dos insetos em cabeça, tórax e abdome, explorando o exoesqueleto e os apêndices articulados.</p>
-                    <a href="https://www.youtube.com/watch?v=l7UbC-8b_ak" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 5: Anatomia e Fisiologia -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/VOY9EmwpOMw" title="Anatomia e Fisiologia de Insetos" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Anatomia e Fisiologia Interna</h2>
-                    <p>Um estudo sobre os sistemas internos dos insetos, incluindo os sistemas digestório, circulatório e respiratório (traqueal).</p>
-                    <a href="https://www.youtube.com/watch?v=VOY9EmwpOMw" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 6: Tipos de Metamorfose -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/-nouiGi5jWE" title="Desenvolvimento e Metamorfose" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Desenvolvimento e Metamorfose</h2>
-                    <p>Entenda as diferenças entre o desenvolvimento ametábolo, hemimetábolo e holometábolo, exemplificados com diferentes ordens de insetos.</p>
-                    <a href="https://www.youtube.com/watch?v=-nouiGi5jWE" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 7: Aparelhos Bucais -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/NTBqL8-FLdw" title="Aparelhos Bucais dos Insetos" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Aparelhos Bucais e Adaptações</h2>
-                    <p>Conheça a diversidade de aparelhos bucais (mastigador, sugador, lambedor e picador) e como eles refletem o hábito alimentar de cada espécie.</p>
-                    <a href="https://www.youtube.com/watch?v=NTBqL8-FLdw" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 8: Asas e Voo -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/rkhDAExpwlg" title="Asas e Mecanismos de Voo" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Asas e Mecanismos de Voo</h2>
-                    <p>Uma análise morfológica sobre os tipos de asas e os complexos mecanismos musculares que permitem aos insetos dominar o ambiente aéreo.</p>
-                    <a href="https://www.youtube.com/watch?v=rkhDAExpwlg" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-        </main>
-
-        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
-    </div>
-</div>
-
-        <!-- Seção: Ecologia (Com carrossel) -->
+        <!-- Seção: Ecologia e Controle Biológico -->
         <div id="ecologia" class="category-section">
             <h2 class="section-title">Ecologia e Controle Biológico</h2>
             <div class="carousel-wrapper">
                 <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-
                 <main class="carousel-grid">
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/-FqUYoyCg4o"
-                                title="Saiba Tudo Sobre o Controle Biológico de Pragas" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/2s4MgvvXgrI" title="Controle Biológico" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Saiba Tudo Sobre o Controle Biológico</h2>
-                            <p>Neste vídeo da série, você terá exclusividade no repasse de informação sobre tudo o que
-                                há de mais moderno quando se trata de controle biológico na agricultura.</p>
+                            <h2>Controle Biológico de Pragas</h2>
+                            <p>Vídeo da Embrapa sobre o uso de inimigos naturais (predadores e parasitoides) para o equilíbrio das lavouras.</p>
+                            <a href="https://www.youtube.com/watch?v=2s4MgvvXgrI" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/-FqUYoyCg4o" title="Saiba Tudo Sobre Controle Biológico" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>O Papel dos Insetos Úteis</h2>
+                            <p>Aprenda a diferenciar insetos pragas de insetos benéficos que auxiliam no controle biológico e na saúde do ecossistema.</p>
                             <a href="https://www.youtube.com/watch?v=-FqUYoyCg4o" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/zq-4hWRF8bk"
-                                title="Controle Biológico usa inimigos naturais das pragas" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s" title="Importância das Abelhas" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Uso de Inimigos Naturais das Pragas</h2>
-                            <p>A premissa básica do controle biológico é controlar as pragas agrícolas e os insetos
-                                transmissores de doenças a partir do uso de seus inimigos naturais.</p>
-                            <a href="https://www.youtube.com/watch?v=zq-4hWRF8bk" target="_blank">Ver no YouTube</a>
+                            <h2>Ecologia da Polinização</h2>
+                            <p>A relação mútua entre insetos e plantas e como essa interação garante a produção de sementes e frutos.</p>
+                            <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/oCsXhKMvTFY" title="Insetos na Cadeia Alimentar" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Insetos na Cadeia Alimentar</h2>
+                            <p>A importância dos insetos como base alimentar para diversos vertebrados e sua função como decompositores.</p>
+                            <a href="https://www.youtube.com/watch?v=oCsXhKMvTFY" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
                 </main>
-
                 <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
         </div>
 
-        <!-- Seção: Taxonomia (Com carrossel) -->
-        <div id="taxonomia" class="category-section">
-            <h2 class="section-title">Taxonomia</h2>
+        <!-- Seção: Classificação (Ordens de Insetos) -->
+        <div id="classificacao" class="category-section">
+            <h2 class="section-title">Classificação (Ordens de Insetos)</h2>
             <div class="carousel-wrapper">
                 <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-
                 <main class="carousel-grid">
-                    <!-- Vídeo 1: Introdução à Taxonomia -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/xizNS8y0qXE"
-                                title="Taxonomia - Classificação dos Organismos" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/X4UD41D5Vi8" title="Ordens de Insetos" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Taxonomia: Classificação dos Organismos</h2>
-                            <p>Uma visão abrangente sobre como a ciência organiza a vida, abordando desde aspectos
-                                metabólicos até a classificação em reinos e domínios.</p>
-                            <a href="https://www.youtube.com/watch?v=xizNS8y0qXE" target="_blank">Ver no YouTube</a>
+                            <h2>Ordens de Insetos: Visão Geral</h2>
+                            <p>Uma introdução didática às principais ordens da classe Insecta, destacando as características morfológicas.</p>
+                            <a href="https://www.youtube.com/watch?v=X4UD41D5Vi8" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
-                    <!-- Vídeo 2: Nomenclatura Zoológica -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/SWXSbyfqUm4"
-                                title="Nomenclatura e classificação dos animais" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/fGbMz9SErR8" title="Coleoptera" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Nomenclatura e Classificação Animal</h2>
-                            <p>Explora a hierarquia taxonômica, o sistema binomial de Lineu e como as novas abordagens,
-                                como a cladística, auxiliam na classificação moderna.</p>
-                            <a href="https://www.youtube.com/watch?v=SWXSbyfqUm4" target="_blank">Ver no YouTube</a>
+                            <h2>Coleoptera: Besouros</h2>
+                            <p>Conheça a imensa diversidade dos coleópteros e a função protetora de seus élitros (asas endurecidas).</p>
+                            <a href="https://www.youtube.com/watch?v=fGbMz9SErR8" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
-                    <!-- Vídeo 3: Filogenia (Cladogramas) -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/yIYlEuJwQrY?si=pOCF-rxiahtBSwgk"
-                                title="Filogenia e Cladogramas" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/CVALjZR9aIs" title="Hymenoptera" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Sistemática e Filogenia</h2>
-                            <p>Entenda a diferença entre taxonomia e sistemática e aprenda como construir e interpretar
-                                cladogramas para compreender as relações evolutivas entre os seres vivos.</p>
-                            <a href="https://www.youtube.com/watch?v=yIYlEuJwQrY&list=PLulNG-y2XEdmVeBnNfoU2WnA7eZGcGllT"
-                                target="_blank">Ver no YouTube</a>
+                            <h2>Hymenoptera: Abelhas e Formigas</h2>
+                            <p>Explora a biologia e a importância ecológica, focando no comportamento social e na polinização.</p>
+                            <a href="https://www.youtube.com/watch?v=CVALjZR9aIs" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
-                    <!-- Vídeo 4: Taxonomia -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/El2Wq79fIZI?si=ftcl_O2yjXFIGKxq"
-                                title="Cladogramas" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/_VBb0klyCaE" title="Lepidoptera" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Taxonomia e sistemática</h2>
-                            <p>Aula sobre como classificar os seres vivos.</p>
-                            <a href="https://www.youtube.com/watch?v=El2Wq79fIZI&t=28s" target="_blank">Ver no
-                                YouTube</a>
+                            <h2>Lepidoptera: Borboletas</h2>
+                            <p>Um mergulho no mundo das escamas alares. Conheça as diferenças entre borboletas e mariposas.</p>
+                            <a href="https://www.youtube.com/watch?v=_VBb0klyCaE" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/iZdY222UoPk" title="Diptera" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Diptera: Moscas e Mosquitos</h2>
+                            <p>Estudo dos dípteros, caracterizados pelo par único de asas e pelos halteres (balancins).</p>
+                            <a href="https://www.youtube.com/watch?v=iZdY222UoPk" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/J3bs9MIOPQ4" title="Hemiptera" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Hemiptera: Percevejos</h2>
+                            <p>Apresenta as características dos hemípteros, como o aparelho bucal picador-sugador.</p>
+                            <a href="https://www.youtube.com/watch?v=J3bs9MIOPQ4" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
                 </main>
-
                 <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
         </div>
 
-<!-- Seção: Classificação (Ordens) -->
-<div id="classificacao" class="category-section">
-    <h2 class="section-title">Classificação (Ordens de Insetos)</h2>
-    <div class="carousel-wrapper">
-        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-        
-        <main class="carousel-grid">
-            
-            <!-- Vídeo 1: Diversidade de Ordens -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/X4UD41D5Vi8" title="Ordens de Insetos" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Ordens de Insetos: Uma Visão Geral</h2>
-                    <p>Uma introdução didática às principais ordens da classe Insecta, destacando as características morfológicas que definem cada grupo evolutivo.</p>
-                    <a href="https://www.youtube.com/watch?v=X4UD41D5Vi8" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 2: Coleoptera (Besouros) -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/fGbMz9SErR8" title="Coleoptera" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Coleoptera: A Ordem dos Besouros</h2>
-                    <p>Conheça a imensa diversidade dos coleópteros, o maior grupo de seres vivos do planeta, e a função protetora de seus élitros (asas endurecidas).</p>
-                    <a href="https://www.youtube.com/watch?v=fGbMz9SErR8" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 3: Hymenoptera (Abelhas e Formigas) -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/CVALjZR9aIs" title="Hymenoptera" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Hymenoptera: Abelhas, Vespas e Formigas</h2>
-                    <p>Explora a biologia e a importância ecológica dos himenópteros, focando no comportamento social e no papel fundamental da polinização.</p>
-                    <a href="https://www.youtube.com/watch?v=CVALjZR9aIs" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 4: Lepidoptera (Borboletas e Mariposas) -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/_VBb0klyCaE" title="Lepidoptera" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Lepidoptera: Borboletas e Mariposas</h2>
-                    <p>Um mergulho no mundo das escamas alares. Conheça as diferenças entre borboletas e mariposas e suas fascinantes adaptações de cores e padrões.</p>
-                    <a href="https://www.youtube.com/watch?v=_VBb0klyCaE" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 5: Diptera (Moscas e Mosquitos) -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/iZdY222UoPk" title="Diptera" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Diptera: Moscas e Mosquitos</h2>
-                    <p>Estudo dos dípteros, caracterizados pelo par único de asas e pelos halteres (balancins). Aborda sua ecologia e importância médica.</p>
-                    <a href="https://www.youtube.com/watch?v=iZdY222UoPk" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-            <!-- Vídeo 6: Hemiptera (Percevejos e Cigarras) -->
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/J3bs9MIOPQ4" title="Hemiptera" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h2>Hemiptera: Percevejos e Cigarras</h2>
-                    <p>Apresenta as características dos hemípteros, como o aparelho bucal picador-sugador e a diversidade entre espécies fitófagas e predadoras.</p>
-                    <a href="https://www.youtube.com/watch?v=J3bs9MIOPQ4" target="_blank">Ver no YouTube</a>
-                </div>
-            </div>
-
-        </main>
-        
-        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
-    </div>
-</div>
-
-        <!-- Seção: Importância médica (Com carrossel) -->
+        <!-- Seção: Importância Médica -->
         <div id="medica" class="category-section">
-            <h2 class="section-title">Importância médica</h2>
+            <h2 class="section-title">Importância Médica</h2>
             <div class="carousel-wrapper">
                 <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
-
                 <main class="carousel-grid">
-                    <!-- Vídeo 1: Ciclo de Vida do Aedes aegypti -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/IbSwogoFH9U" title="Aedes aegypti Life Cycle"
-                                frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/IbSwogoFH9U" title="Ciclo Aedes aegypti" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Ciclo de Vida do Aedes aegypti</h2>
-                            <p>Vídeo detalhado da Fiocruz mostrando as fases de ovo, larva, pupa e adulto, e como o
-                                mosquito se dispersa para perpetuar a espécie.</p>
+                            <h2>Biologia do Aedes aegypti</h2>
+                            <p>Vídeo detalhado da Fiocruz sobre o ciclo biológico do mosquito transmissor da Dengue, Zika e Chikungunya.</p>
                             <a href="https://www.youtube.com/watch?v=IbSwogoFH9U" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
-                    <!-- Vídeo 2: Vigilância de Arboviroses -->
                     <div class="video-card">
                         <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/XgA2pnryIAg"
-                                title="Vigilância e controle das Arboviroses Urbanas" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/p_Vq8A6S0u8" title="Barbeiro e Chagas" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-content">
-                            <h2>Vigilância e Controle de Arboviroses</h2>
-                            <p>Discussão sobre a situação das arboviroses no Brasil e as estratégias necessárias para
-                                intensificar as ações de controle urbano.</p>
+                            <h2>O Barbeiro e a Doença de Chagas</h2>
+                            <p>Estudo dos triatomíneos: biologia, hábitos noturnos e a importância da vigilância epidemiológica.</p>
+                            <a href="https://www.youtube.com/watch?v=p_Vq8A6S0u8" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/O-A9K_z0I0w" title="Insetos Peçonhentos" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Insetos Peçonhentos e Acidentes</h2>
+                            <p>Orientações do Instituto Butantan sobre abelhas, formigas e lagartas venenosas e os primeiros socorros.</p>
+                            <a href="https://www.youtube.com/watch?v=O-A9K_z0I0w" target="_blank">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/XgA2pnryIAg" title="Controle de Arboviroses" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h2>Vigilância de Vetores Urbanos</h2>
+                            <p>Discussão sobre o impacto do saneamento básico e as estratégias do SUS para o controle de insetos vetores.</p>
                             <a href="https://www.youtube.com/watch?v=XgA2pnryIAg" target="_blank">Ver no YouTube</a>
                         </div>
                     </div>
-
-                    <!-- Vídeo 3: Controle de Vetores no SUS -->
-                    <div class="video-card">
-                        <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/WK0VTBHoV4g"
-                                title="Formação Continuada em Controle de Vetores" frameborder="0"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h2>Formação em Controle de Vetores</h2>
-                            <p>Aula sobre o manejo de vetores (como triatomíneos) no âmbito do SUS e a importância do
-                                saneamento e gestão de resíduos sólidos.</p>
-                            <a href="https://www.youtube.com/watch?v=WK0VTBHoV4g" target="_blank">Ver no YouTube</a>
-                        </div>
-                    </div>
                 </main>
-
                 <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
             </div>
         </div>
@@ -496,21 +428,44 @@
         </footer>
     </div>
 
-    <!-- Script do carrossel -->
+    <!-- Script de Funcionalidade do Carrossel e Botões Limites -->
     <script>
         function scrollCarousel(button, direction) {
             const wrapper = button.parentElement;
-            const grid = wrapper.querySelector('.carousel-grid');
-            const cardWidth = grid.querySelector('.video-card').offsetWidth;
-            const gap = 32;
-            const scrollAmount = cardWidth + gap;
+            const grid = wrapper.querySelector('main');
+            const card = grid.querySelector('.video-card');
+            
+            if (card) {
+                const cardWidth = card.offsetWidth;
+                const gap = 24; // Espaçamento médio
+                const scrollAmount = cardWidth + gap;
 
-            grid.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
+                grid.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+
+                // Lógica da seta vermelha no fim do carrossel
+                setTimeout(() => {
+                    const scrollLeft = Math.ceil(grid.scrollLeft);
+                    const maxScroll = grid.scrollWidth - grid.clientWidth;
+                    
+                    const btnPrev = wrapper.querySelector('.prev');
+                    const btnNext = wrapper.querySelector('.next');
+
+                    // Remove o vermelho de ambas para resetar o estado
+                    btnPrev.classList.remove('limit-reached');
+                    btnNext.classList.remove('limit-reached');
+
+                    // Aplica vermelho se chegou no limite direito ou esquerdo
+                    if (scrollLeft >= maxScroll - 5) {
+                        btnNext.classList.add('limit-reached');
+                    } else if (scrollLeft <= 5) {
+                        btnPrev.classList.add('limit-reached');
+                    }
+                }, 400); // 400ms para aguardar o fim da animação suave
+            }
         }
     </script>
 </body>
-
 </html>
