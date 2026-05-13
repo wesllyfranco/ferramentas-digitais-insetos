@@ -1,12 +1,18 @@
-/* --- Novas Estilizações para o Menu e Seções --- */
+/* --- Estilos Adicionais para Seções e Menu --- */
 
-/* Menu de Navegação */
+.separator {
+    border: 0;
+    height: 1px;
+    background: #eaecef;
+    margin: 4rem 0;
+}
+
 .category-nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .category-nav a {
@@ -14,8 +20,8 @@
     border: 1px solid #d1d5da;
     border-radius: 6px;
     color: #0366d6;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s;
@@ -25,21 +31,17 @@
     background-color: #0366d6;
     color: #ffffff;
     border-color: #0366d6;
-    text-decoration: none;
 }
 
-/* Títulos de Seção dentro da Grid */
 .section-title {
-    grid-column: 1 / -1; /* Ocupa todas as colunas da grid */
-    font-size: 1.5rem;
-    font-weight: 700;
+    grid-column: 1 / -1; /* Ocupa a largura total da grade */
+    font-size: 1.75rem;
     color: #24292e;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #eaecef;
+    border-left: 6px solid #0366d6;
+    padding-left: 1rem;
     margin: 2rem 0 1rem 0;
 }
 
-/* Ajuste de suavidade ao clicar nas âncoras */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Para o menu deslizar suavemente */
 }
