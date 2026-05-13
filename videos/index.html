@@ -29,94 +29,103 @@
             <a href="#medica">Importância Médica</a>
         </nav>
 
-        <!-- Seção: Destaques (Sem carrossel, grade clássica) -->
-        <div id="destaques" class="category-section">
-            <h2 class="section-title">Vídeos em Destaque</h2>
+       <!-- Seção: Destaques (Grid no Desktop / Carrossel no Mobile) -->
+<div id="destaques" class="category-section">
+    <h2 class="section-title">Vídeos em Destaque</h2>
 
-            <main class="video-grid">
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/-Fi0yTuwRic" title="A Comunicação Das Formigas"
-                            frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>A Comunicação Das Formigas</h2>
-                        <p>Este vídeo didático explica como as formigas utilizam diferentes compostos químicos
-                            (feromônios) para se comunicar, recrutando companheiras para encontrar alimento ou alertando
-                            sobre perigos.</p>
-                        <a href="https://www.youtube.com/watch?v=-Fi0yTuwRic" target="_blank">Ver no YouTube</a>
-                    </div>
-                </div>
+    <!-- Wrapper que ativa os controles no Mobile -->
+    <div class="carousel-wrapper carousel-mobile">
+        <!-- Botão de voltar (exibido apenas no mobile via CSS) -->
+        <button class="carousel-btn prev" onclick="scrollCarousel(this, -1)">&#10094;</button>
 
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/V1wdRRPvczw" title="Existem formigas paramédicas"
-                            frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>Existem formigas paramédicas?</h2>
-                        <p>Do canal Super Novas, este vídeo curto revela um comportamento social complexo em formigas: o
-                            resgate de feridas. Um exemplo fascinante de cooperação na colônia.</p>
-                        <a href="https://www.youtube.com/watch?v=V1wdRRPvczw" target="_blank">Ver no YouTube</a>
-                    </div>
+        <!-- A classe 'carousel-grid' garante o alinhamento horizontal no mobile -->
+        <main class="video-grid carousel-grid">
+            
+            <!-- Vídeo 1 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/-Fi0yTuwRic" title="A Comunicação Das Formigas"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h2>A Comunicação Das Formigas</h2>
+                    <p>Este vídeo didático explica como as formigas utilizam diferentes compostos químicos (feromônios) para se comunicar, recrutando companheiras para encontrar alimento ou alertando sobre perigos.</p>
+                    <a href="https://www.youtube.com/watch?v=-Fi0yTuwRic" target="_blank">Ver no YouTube</a>
+                </div>
+            </div>
 
+            <!-- Vídeo 2 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/V1wdRRPvczw" title="Existem formigas paramédicas"
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/bhOP5vZnTmk"
-                            title="Insetos: Biodiversidade, Importância e Classificação" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>Insetos: Biodiversidade e Classificação</h2>
-                        <p>Uma aula completa que explora a anatomia dos artrópodes, com foco na classe Insecta. Aborda a
-                            classificação nas principais ordens e características evolutivas.</p>
-                        <a href="https://www.youtube.com/watch?v=bhOP5vZnTmk" target="_blank">Ver no YouTube</a>
-                    </div>
+                <div class="card-content">
+                    <h2>Existem formigas paramédicas?</h2>
+                    <p>Do canal Super Novas, este vídeo curto revela um comportamento social complexo em formigas: o resgate de feridas. Um exemplo fascinante de cooperação na colônia.</p>
+                    <a href="https://www.youtube.com/watch?v=V1wdRRPvczw" target="_blank">Ver no YouTube</a>
                 </div>
+            </div>
 
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta"
-                            frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>Metamorfose da Borboleta</h2>
-                        <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta
-                            (larva), crisálida (pupa) e a fase adulta, explicando as transformações biológicas
-                            envolvidas.</p>
-                        <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
-                    </div>
+            <!-- Vídeo 3 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/bhOP5vZnTmk"
+                        title="Insetos: Biodiversidade, Importância e Classificação" frameborder="0"
+                        allowfullscreen></iframe>
                 </div>
+                <div class="card-content">
+                    <h2>Insetos: Biodiversidade e Classificação</h2>
+                    <p>Uma aula completa que explora a anatomia dos artrópodes, com foco na classe Insecta. Aborda a classificação nas principais ordens e características evolutivas.</p>
+                    <a href="https://www.youtube.com/watch?v=bhOP5vZnTmk" target="_blank">Ver no YouTube</a>
+                </div>
+            </div>
 
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s"
-                            title="Como o fim das abelhas pode acabar com a humanidade" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>O Colapso das Abelhas e o Impacto na Humanidade</h2>
-                        <p>Este vídeo explica o papel vital das abelhas na polinização global e discute os riscos reais
-                            do desaparecimento desses insetos para a segurança alimentar.</p>
-                        <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
-                    </div>
+            <!-- Vídeo 4 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/GY-hPe8nmIM" title="Metamorfose da Borboleta"
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="card-content">
+                    <h2>Metamorfose da Borboleta</h2>
+                    <p>Um olhar detalhado sobre as quatro etapas do ciclo de vida desses lepidópteros: ovo, lagarta (larva), crisálida (pupa) e a fase adulta, explicando as transformações biológicas envolvidas.</p>
+                    <a href="https://www.youtube.com/watch?v=GY-hPe8nmIM" target="_blank">Ver no YouTube</a>
+                </div>
+            </div>
 
-                <div class="video-card">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/2s4MgvvXgrI" title="Controle Biológico de Pragas"
-                            frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h2>Controle Biológico: Insetos Úteis vs Pragas</h2>
-                        <p>Produzido pela Embrapa, este vídeo demonstra como insetos predadores e parasitoides são
-                            utilizados como inimigos naturais para controlar pragas agrícolas.</p>
-                        <a href="https://www.youtube.com/watch?v=2s4MgvvXgrI" target="_blank">Ver no YouTube</a>
-                    </div>
+            <!-- Vídeo 5 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/kD8kWCZAa5s"
+                        title="Como o fim das abelhas pode acabar com a humanidade" frameborder="0"
+                        allowfullscreen></iframe>
                 </div>
-            </main>
-        </div>
+                <div class="card-content">
+                    <h2>O Colapso das Abelhas e o Impacto na Humanidade</h2>
+                    <p>Este vídeo explica o papel vital das abelhas na polinização global e discute os riscos reais do desaparecimento desses insetos para a segurança alimentar.</p>
+                    <a href="https://www.youtube.com/watch?v=kD8kWCZAa5s" target="_blank">Ver no YouTube</a>
+                </div>
+            </div>
+
+            <!-- Vídeo 6 -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/2s4MgvvXgrI" title="Controle Biológico de Pragas"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h2>Controle Biológico: Insetos Úteis vs Pragas</h2>
+                    <p>Produzido pela Embrapa, este vídeo demonstra como insetos predadores e parasitoides são utilizados como inimigos naturais para controlar pragas agrícolas.</p>
+                    <a href="https://www.youtube.com/watch?v=2s4MgvvXgrI" target="_blank">Ver no YouTube</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Botão de avançar (exibido apenas no mobile via CSS) -->
+        <button class="carousel-btn next" onclick="scrollCarousel(this, 1)">&#10095;</button>
+    </div>
+</div>
 
        <!-- Seção: Morfologia (Com carrossel) -->
 <div id="morfologia" class="category-section">
