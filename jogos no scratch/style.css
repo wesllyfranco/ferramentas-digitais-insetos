@@ -1,7 +1,7 @@
 /* --- Reset Básico e Tipografia --- */
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 body {
@@ -10,6 +10,9 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o rodapé fique embaixo em páginas curtas */
 }
 
 /* --- Cabeçalho --- */
@@ -18,25 +21,56 @@ header {
   padding: 2.5rem 1.5rem;
   background: #2c3e50;
   color: white;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eaecef;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
-/* --- Estrutura Principal --- */
+header p {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+  max-width: 800px;
+  margin: 0.5rem auto 0;
+}
+
+/* --- Aviso de Atualização (Usado na Aba Leituras) --- */
+.aviso-atualizacao {
+  background-color: #f39c12;
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Estrutura Principal Genérica --- */
 .container {
-  max-width: 900px;
-  margin: 2rem auto;
+  max-width: 1200px; /* Aumentado para acomodar bem o grid de 3 colunas */
+  margin: 0 auto;
   padding: 0 1rem;
+  flex-grow: 1; /* Faz a área principal crescer e empurrar o rodapé para baixo */
+}
+
+/* Container mais estreito para páginas de tutorial (ex: Jogos Scratch) */
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
   background: white;
   padding: 2rem;
-  border-radius: 8px; /* Bordas mais limpas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra suave, sem efeito 3D pesado */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
 }
 
@@ -69,7 +103,7 @@ li {
 }
 
 a {
-  color: #007bff;
+  color: #0366d6; /* Azul estilo GitHub */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -80,10 +114,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Responsividade para o Vídeo (YouTube) --- */
+/* --- Responsividade para Vídeos (YouTube) --- */
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+  padding-bottom: 56.25%; /* Proporção 16:9 */
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -103,12 +137,12 @@ a:hover {
 
 /* --- Estilos Específicos para Seções --- */
 .alternatives {
-  background: #fdfbf7; /* Um tom levemente diferente para destacar */
+  background: #fdfbf7;
   border-left: 4px solid #f39c12;
 }
 
 .bncc {
-  background: #f0f7f4; /* Fundo esverdeado suave */
+  background: #f0f7f4;
   border-left: 4px solid #27ae60;
 }
 
@@ -116,11 +150,124 @@ a:hover {
   list-style-type: square;
 }
 
+/* --- Grade de Conteúdo (Usado na Home e Aba Leituras) --- */
+.video-grid, .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Cards (Home e Leituras) --- */
+.video-card, .card {
+  background-color: #ffffff;
+  border: 1px solid #d1d5da; /* Borda sutil estilo GitHub */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+}
+
+.video-card:hover, .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.video-card h2, .card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  border-bottom: none; /* Remove a borda padrão do h2 genérico */
+}
+
+.video-card h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #586069;
+  margin-bottom: 0.75rem;
+}
+
+.video-card p, .card p {
+  font-size: 0.95rem;
+  color: #586069;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Empurra o link para o fundo */
+}
+
+.video-card a {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* --- Modal (Sobre o Projeto) --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  color: #333;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #e74c3c;
+}
+
 /* --- Rodapé --- */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  margin-top: auto; /* Empurra o rodapé pro fundo */
   background: #2c3e50;
   color: #bdc3c7;
   font-size: 0.9rem;
@@ -134,17 +281,50 @@ footer a:hover {
   color: #fff;
 }
 
-/* --- Ajustes para Telas Menores (Celulares) --- */
-@media (max-width: 600px) {
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-footer {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-footer:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+/* --- Responsividade (Telas Menores) --- */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
   }
   
   section {
     padding: 1.5rem;
   }
   
-  p, li {
-    font-size: 1rem;
+  .video-grid, .grid {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
   }
 }
