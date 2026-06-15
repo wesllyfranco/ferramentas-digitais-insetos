@@ -22,6 +22,20 @@ header {
     border-bottom: 1px solid #eaecef;
 }
 
+/* --- Aviso de Atualização --- */
+.aviso-atualizacao {
+    background-color: #f39c12; /* Laranja para chamar atenção */
+    color: #ffffff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px; /* Borda mais arredondada para um visual moderno */
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 header h1 {
     font-size: 2.5rem;
     font-weight: 800;
@@ -97,55 +111,4 @@ header p {
 }
 
 .card-content a:hover {
-    text-decoration: underline;
-}
-
-/* --- Estrutura do Vídeo Responsivo --- */
-.video-responsive {
-    position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-
-.video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* --- Rodapé --- */
-footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eaecef;
-    color: #586069;
-    font-size: 0.875rem;
-}
-
-/* --- Regras para Telas Menores (Responsividade) --- */
-@media (max-width: 1024px) {
-    .video-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+    text-decoration
