@@ -21,10 +21,10 @@
       min-height: 100vh;
     }
 
-      header {
+    header {
       text-align: center;
       padding: 2.5rem 1.5rem;
-      background: #2c3e50; /* Tom de azul mais escuro e moderno */
+      background: #2c3e50; 
       color: white;
     }
 
@@ -34,8 +34,8 @@
     }
     
     header p {
-        font-size: 1.1rem;
-        color: #bdc3c7; /* Cinza claro para subtítulo */
+      font-size: 1.1rem;
+      color: #bdc3c7; 
     }
 
     /* Grid de projetos */
@@ -74,38 +74,102 @@
     }
     
     .card p {
-        flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
-        margin-bottom: 1rem;
+      flex-grow: 1; 
+      margin-bottom: 1rem;
     }
 
     /* Rodapé */
     footer {
       text-align: center;
-      padding: 2rem 1.5rem; /* Aumentei o padding para dar mais espaço */
+      padding: 2rem 1.5rem; 
       margin-top: auto;
       background: #2c3e50;
       color: #bdc3c7;
       font-size: 0.9rem;
     }
 
-    /* NOVO ESTILO PARA O LINK DESTACADO DO REPOSITÓRIO */
-    .repo-link {
-        display: inline-block;
-        background-color: #ecf0f1; /* Cor clara (quase branco) */
-        color: #2c3e50; /* Cor escura (mesma do header) */
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 1rem;
-        text-decoration: none;
-        margin-bottom: 1.5rem; /* Espaçamento antes dos créditos */
-        transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Container para alinhar os botões do rodapé */
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap; /* Garante que não quebre layout no celular */
+    }
+
+    /* ESTILO PARA OS BOTÕES (REPOSITÓRIO E SOBRE) */
+    .btn-footer {
+      display: inline-block;
+      background-color: #ecf0f1; 
+      color: #2c3e50; 
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
     
-    .repo-link:hover {
-        background-color: #ffffff;
-        transform: translateY(-2px);
-        text-decoration: none; /* Remove sublinhado no hover */
+    .btn-footer:hover {
+      background-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* --- ESTILOS DO MODAL (SOBRE O PROJETO) --- */
+    .modal-overlay {
+      display: none; /* Oculto por padrão */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      color: #333;
+      text-align: left;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .modal-content h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 0.5rem;
+    }
+
+    .modal-content p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #888;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #e74c3c;
     }
 
   </style>
@@ -113,7 +177,7 @@
 <body>
   <header>
     <h1>Ferramentas Digitais para o ensino de insetos</h1>
-    <p>Portifólio de projetos desenvolvidos para o ensino de insetos no ensino médio</p>
+    <p>Portfólio de projetos desenvolvidos para o ensino de insetos no ensino médio</p>
   </header>
 
   <main class="grid">
@@ -133,7 +197,7 @@
       <p>Uma galeria interativa para visualizar modelos 3D de diferentes espécies de insetos.</p>
     </a>
 
-    <a href="jogos no scratch/index.html" class="card">
+    <a href="URL_DO_SEU_PERFIL_OU_PROJETO_SCRATCH" class="card" target="_self">
       <h2>🕹️ Jogos no Scratch</h2>
       <p>Coleção de jogos educativos e animações desenvolvidas na plataforma Scratch. (Link externo)</p>
     </a>
@@ -166,16 +230,50 @@
   </main>
 
   <footer>
-    <p>
-        <a href="https://github.com/wesllyfranco/ferramentas-digitais-insetos" 
-           class="repo-link" 
-           target="_blank" 
-           rel="noopener noreferrer">
-            Ver o Repositório Principal no GitHub
+    <div class="footer-buttons">
+        <a href="https://github.com/wesllyfranco/ferramentas-digitais-insetos" class="btn-footer" target="_blank" rel="noopener noreferrer">
+            Ver o Repositório no GitHub
         </a>
-    </p>
+        <button id="openModalBtn" class="btn-footer">
+            Sobre o Projeto
+        </button>
+    </div>
     
-    <p>Desenvolvido por Weslly Franco | Hospedado no GitHub Pages</p>
+    <p>Desenvolvido por Weslly Franco | Coordenação de Laison Vinicius Damasceno dos Santos | Hospedado no GitHub Pages</p>
   </footer>
+
+  <div id="aboutModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModalBtn">&times;</button>
+      <h2>🦋 Ferramentas Digitais: Insetos 🐞</h2>
+      <p>Este repositório é uma coleção de ferramentas digitais e jogos educativos focados no ensino de conceitos básicos sobre insetos.</p>
+      <p>O objetivo principal é fornecer recursos interativos e simples para uso em sala de aula, auxiliando no aprendizado de forma lúdica.</p>
+      <p>Os projetos apresentados aqui servem como um banco de dados e material complementar ao capítulo <strong>RECURSOS E FERRAMENTAS DIGITAIS PARA O ENSINO SOBRE INSETOS NO ENSINO MÉDIO</strong>.</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('aboutModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    // Abre o modal
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    // Fecha o modal pelo botão X
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Fecha o modal se clicar fora do conteúdo
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+
 </body>
 </html>
