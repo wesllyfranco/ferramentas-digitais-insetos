@@ -1,1 +1,150 @@
+/* --- Reset Básico e Tipografia --- */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Cabeçalho --- */
+header {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: #2c3e50;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* --- Estrutura Principal --- */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px; /* Bordas mais limpas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra suave, sem efeito 3D pesado */
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.emoji {
+  display: inline-block;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+
+ul, ol {
+  padding-left: 25px;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* --- Responsividade para o Vídeo (YouTube) --- */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Estilos Específicos para Seções --- */
+.alternatives {
+  background: #fdfbf7; /* Um tom levemente diferente para destacar */
+  border-left: 4px solid #f39c12;
+}
+
+.bncc {
+  background: #f0f7f4; /* Fundo esverdeado suave */
+  border-left: 4px solid #27ae60;
+}
+
+.bncc ul {
+  list-style-type: square;
+}
+
+/* --- Rodapé --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  background: #2c3e50;
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ecf0f1;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* --- Ajustes para Telas Menores (Celulares) --- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  p, li {
+    font-size: 1rem;
+  }
+}
